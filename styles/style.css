@@ -20,9 +20,9 @@ p {
     letter-spacing: 1px;
 }
 
-body {
+div.body{
     min-width: 300px;
-    margin: 0 200px;
+    margin: 0 10%;
     background-color: #bd9358;
     padding: 20px 20px 20px 20px;
     border: 10px solid black;
@@ -48,6 +48,3 @@ div.flex-container{
     text-align: center;
 }
 
-ol {
-    margin: 0 auto;
-}

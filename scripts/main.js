@@ -1,5 +1,6 @@
 let miBoton = document.querySelector("button");
 let titulo = document.querySelector("h1");
+let divBody = document.querySelector("#body");
 
 miBoton.onclick = function() {
     cambiarNombreDeTitulo();
