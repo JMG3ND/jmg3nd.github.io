@@ -10,9 +10,3 @@ function cambiarNombreDeTitulo(){
     localStorage.setItem("nombre", miNombre);
     titulo.textContent = miNombre + ", Bienvenido a los Algoritmos OLL";
 }
-
-if (localStorage.getItem("nombre")){
-    titulo.textContent = localStorage.getItem("nombre") + ", Bienvenido a los Algoritmos OLL";
-} else {
-    cambiarNombreDeTitulo();
-}
