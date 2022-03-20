@@ -1,2 +1,2 @@
-# jmg3nd.github.io
+# algoritmos-oll.github.io
 Proyecto web de aprendizaje personal.
