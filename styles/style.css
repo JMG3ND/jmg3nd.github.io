@@ -2,15 +2,13 @@ html {
     font-size: 20px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
     font-family: 'Roboto Serif', serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
     background-image: url("../images/background.jpg");
-    background-size: 100%;
+    background-size: 500px;
     background-attachment: fixed;
 }
 
 h1 {
     margin: 0;
     padding: 20px 0;
-    color: #00539F;
-    text-shadow: 3px 3px 1px black;
     text-align: center;
 }
 
@@ -23,7 +21,8 @@ p {
 div.body{
     min-width: 300px;
     margin: 0 10%;
-    background-color: #bd9358;
+    
+    background-color: #ffbb9c;
     padding: 20px 20px 20px 20px;
     border: 10px solid black;
 }
@@ -36,7 +35,7 @@ img {
 div.algoritmo {
     width: 200px;
     min-height: 270px;
-    background-color: #f3d4a9;
+    background-color: #ffddcd;
     border: 5px solid black;
     margin: 5px auto;
     display: inline-block;
