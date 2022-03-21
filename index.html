@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <!--Idioma predeterminado de la página-->
+  <head lang="es">
     <meta charset="utf-8">
     <!--Nombre del autor de la página web-->
     <meta name="author" content="José Gutiérrez">
@@ -14,27 +15,49 @@
 
     <!--Ícono de la pestaña-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--Cargar los scripts el dfer es para que se haga después de cargar el html-->
+    <script src="scripts/main.js" defer></script>
+
+    
     <title>Algoritmos del cubo 3x3</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&display=swap" rel="stylesheet">
+    <!--Fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="body" id="body">
       <h1>
-        <strong>
           Algoritmos OLL
-        </strong>
       </h1>
-      <p>
-        <strong>
+      <p class="porigen">
           Información obtenida de: <a href="http://www.myrubik.com/cfopreduit3x3x3.php?lang=es">myrubick.com</a>
-        </strong>
       </p>
-      <p>
-        <strong>
-          Estos son los algoritmos que hay que seguir para resolver los casos que se muestran en cada imágen.
-        </strong>
-      </p>
+      <!--Índice-->
+      <div class="indice">
+        <h2>Índice</h2>
+        <ul>
+          <li><a href="#cruz">Caso Cruz</a></li>
+          <li><a href="#punto">Caso Punto</a></li>
+          <li><a href="#linea">Caso Línea</a></li>
+          <li><a href="#lpequeña">Caso L pequeña</a></li>
+          <li><a href="#cuadrada">Caso Cuadrardo</a></li>
+          <li><a href="#relampago">Caso Relámpago</a></li>
+          <li><a href="#pez">Caso Pez</a></li>
+          <li><a href="#c">Caso C</a></li>
+          <li><a href="#l">Caso L</a></li>
+          <li><a href="#p">Caso P</a></li>
+          <li><a href="#t">Caso T</a></li>
+          <li><a href="#w">Caso W</a></li>
+          <li><a href="#z">Caso Z</a></li>
+          <li><a href="#esquina-orientada">Esquina Orientada</a></li>
+        </ul> 
+      </div>
+    </div>
+    <!--Casos de cruz-->
+    <div class="body">
+      <h2 id="cruz" class="casosh2">Caso Cruz</h2>
       <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\creu_1.png" alt="Caso de oll cruz 1" width="150px">
@@ -64,6 +87,13 @@
           <img src="images\OLL\creu_7.png" alt="Caso de oll cruz 7" width="150px">
           <p><strong>R’ F’ L’ F R F’ L F<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Casos de punto-->
+    <div class="body">
+      <h2 id="punto" class="casosh2">Caso Punto</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\punt_1.png" alt="Caso de oll punto 1" width="150px">
           <p><strong>R U2 R2 F R F' U2 R' F R F'<strong></p>
@@ -96,6 +126,13 @@
           <img src="images\OLL\punt_8.png" alt="Caso de oll punto 8" width="150px">
           <p><strong>r' R U (R U R' U') r2 R2 U R U' r'<strong></p>
         </div>
+      </div>
+    </div>
+    
+    <!--Casos de línea-->
+    <div class="body">
+      <h2 id="linea" class="casosh2">Caso Línea</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\linia_1.png" alt="Caso de oll linea 1" width="150px">
           <p><strong>R U R' U R d' R U' R' F'<strong></p>
@@ -112,6 +149,13 @@
           <img src="images\OLL\linia_4.png" alt="Caso de oll linea 4" width="150px">
           <p><strong>F (R U R' U') x R U' L U R' U' r'<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Casos L pequeña-->
+    <div class="body">
+      <h2 id="lpequeña" class="casosh2">Caso L pequeña</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\ele_1.png" alt="Caso de oll L pequeña 1" width="150px">
           <p><strong>r U R' U R U' R' U R U2 r'<strong></p>
@@ -136,6 +180,13 @@
           <img src="images\OLL\ele_6.png" alt="Caso de oll L pequeña 6" width="150px">
           <p><strong>F (R U R' U') (R U R' U') F'<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Caso cuadrado-->
+    <div class="body">
+      <h2 id="cuadrado" class="casosh2">Caso Cuadrado</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\quadrat_1.png" alt="Caso de oll cuadrado 1" width="150px">
           <p><strong>r U2 R' U' R U' r'<strong></p>
@@ -144,6 +195,13 @@
           <img src="images\OLL\quadrat_2.png" alt="Caso de oll cuadrado 2" width="150px">
           <p><strong>l' U2 L U L' U l<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Caso relampago-->
+    <div class="body">
+      <h2 id="relampago" class="casosh2">Caso relampago</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\llamp_1.png" alt="Caso de oll relampago 1" width="150px">
           <p><strong>L F R' F R F2 L'<strong></p>
@@ -176,6 +234,13 @@
           <img src="images\OLL\llamp_8.png" alt="Caso de oll relampago 8" width="150px">
           <p><strong>L2 U' L B L' U L2 U' r' U' r<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Caso pez-->
+    <div class="body">
+      <h2 id="pez" class="casosh2">Caso Pez</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\peix_1.png" alt="Caso de oll pez 1" width="150px">
           <p><strong>F R U' R' U' R U R' U' F'<strong></p>
@@ -192,6 +257,13 @@
           <img src="images\OLL\peix_4.png" alt="Caso de oll pez 4" width="150px">
           <p><strong>L U L' y x L' U L F' L' U' L<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Caso C-->
+    <div class="body">
+      <h2 id="C" class="casosh2">Caso C</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\c_1.png" alt="Caso de oll C 1" width="150px">
           <p><strong>F’ L’ U’ L y’ R U’ R’ U2 R<strong></p>
@@ -200,6 +272,13 @@
           <img src="images\OLL\c_2.png" alt="Caso de oll C 2" width="150px">
           <p><strong>R U R2 U’ R’ F R U R U’ F’<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Caso L-->
+    <div class="body">
+      <h2 id="l" class="casosh2">Caso L</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\L_1.png" alt="Caso de oll L 1" width="150px">
           <p><strong>R' F R U R' F' R y L U' L'<strong></p>
@@ -216,6 +295,13 @@
           <img src="images\OLL\L_4.png" alt="Caso de oll L 4" width="150px">
           <p><strong>R B R' L U L' U' R B' R'<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Caso P-->
+    <div class="body">
+      <h2 id="p" class="casosh2">Caso P</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\P_1.png" alt="Caso de oll P 1" width="150px">
           <p><strong>F U R U' R' F'<strong></p>
@@ -232,6 +318,13 @@
           <img src="images\OLL\P_4.png" alt="Caso de oll P 4" width="150px">
           <p><strong>R' d' L d R U' R' F' R<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Caso T-->
+    <div class="body">
+      <h2 id="t" class="casosh2">Caso T</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\T_1.png" alt="Caso de oll T 1" width="150px">
           <p><strong>R U R' U' R' F R F'<strong></p>
@@ -240,6 +333,13 @@
           <img src="images\OLL\T_2.png" alt="Caso de oll T 2" width="150px">
           <p><strong>F R U R' U' F'<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Caso W-->
+    <div class="body">
+      <h2 id="w" class="casosh2">Caso W</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\w_1.png" alt="Caso de oll W 1" width="150px">
           <p><strong>R U R' U R U' R' U' R' F R F'<strong></p>
@@ -248,6 +348,13 @@
           <img src="images\OLL\w_2.png" alt="Caso de oll W 2" width="150px">
           <p><strong>L' U' L U' L' U L U L F' L' F<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Caso Z-->
+    <div class="body">
+      <h2 id="z" class="casosh2">Caso Z</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\z_1.png" alt="Caso de oll Z 1" width="150px">
           <p><strong>R' F (R U R' U') y L' d R<strong></p>
@@ -256,6 +363,13 @@
           <img src="images\OLL\z_2.png" alt="Caso de oll Z 2" width="150px">
           <p><strong>L F' L' U' L U y' R d' L'<strong></p>
         </div>
+      </div>
+    </div>
+
+    <!--Caso Esquinas orientadas-->
+    <div class="body">
+      <h2 id="esquina-orientada" class="casosh2">Caso Esquina Orientada</h2>
+      <div class="flex-container">
         <div class="algoritmo">
           <img src="images\OLL\4cantonades_1.png" alt="Caso de oll Esquinas orientadas 1" width="150px">
           <p><strong>M' U' M U2 M' U' M<strong></p>
@@ -265,8 +379,6 @@
           <p><strong>L' (R U R' U') L R' F R F'<strong></p>
         </div>
       </div>
-      <button>Cambiar de usuario</button>
-      <script src="scripts/main.js"></script>
     </div>
   </body>
 </html>
