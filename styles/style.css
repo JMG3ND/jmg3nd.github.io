@@ -5,26 +5,35 @@ html {
     background-size: 500px;
     background-attachment: fixed;
 }
-
+/*Diseño de titulos*/
 h1 {
     margin: 0;
     padding: 20px 0;
     text-align: center;
 }
 
-p {
+h2.casosh2{
+    margin: 1% 0 3% 6%;
+}
+
+/*Diseño de div*/
+
+p.porigen{
     text-align: center;
+}
+
+p {
     line-height: 2;
     letter-spacing: 1px;
 }
 
 div.body{
     min-width: 300px;
-    margin: 0 10%;
-    
+    margin: 3% 10%;
     background-color: #ffbb9c;
     padding: 20px 20px 20px 20px;
     border: 10px solid black;
+    border-radius: 20px;
 }
 
 img {
@@ -47,3 +56,6 @@ div.flex-container{
     text-align: center;
 }
 
+div.indice{
+    margin: 0 10%;
+}
