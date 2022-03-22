@@ -36,12 +36,13 @@ div.body{
     border-radius: 20px;
 }
 
+/*Imagenes*/
 img {
     display: block;
     margin: 0 auto;
 }
 
-div.algoritmo {
+figure.algoritmo {
     width: 200px;
     min-height: 270px;
     background-color: #ffddcd;
