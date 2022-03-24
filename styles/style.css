@@ -4,6 +4,7 @@ html {
     background-image: url("../images/background.jpg");
     background-size: 500px;
     background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 /*Diseño de titulos*/
 h1 {
@@ -27,13 +28,17 @@ p {
     letter-spacing: 1px;
 }
 
-div.body{
+section.caso, header{
     min-width: 300px;
     margin: 3% 10%;
     background-color: #ffbb9c;
     padding: 20px 20px 20px 20px;
     border: 10px solid black;
     border-radius: 20px;
+}
+
+section.caso {
+    text-align: center;
 }
 
 /*Imagenes*/
@@ -51,12 +56,9 @@ figure.algoritmo {
     display: inline-block;
     vertical-align: top;
     border-radius: 20px;
+
 }
 
-div.flex-container{
-    text-align: center;
-}
-
-div.indice{
+nav.indice{
     margin: 0 10%;
 }
