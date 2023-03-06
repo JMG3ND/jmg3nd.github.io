@@ -1,1 +1,2 @@
-# jmg3nd.github.io
+# SolvedRubik
+Página que enseña a resolver los cubos de rubik

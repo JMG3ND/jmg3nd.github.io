@@ -1,0 +1,34 @@
+@use 'colors-theme-dark.scss';
+@use 'colors-theme-light.scss';
+@use 'justify-elements-in-screen.scss';
+@use 'top-navegation-bar.scss';
+@use 'footer.scss';
+@use 'home-page-finder.scss';
+
+body{
+	background-color: colors-theme-dark.$baground-color-z-index-2;
+	* {
+		color: colors-theme-dark.$text-color-bagraund-z-index-1;
+	}
+}
+body.light {
+	background-color: colors-theme-light.$baground-color-z-index-2;
+	*{
+		color: colors-theme-light.$text-color-bagraund-z-index-1;
+	}
+}
+.imposter{
+	height: 100vh;
+}
+header + section, section *{
+	background-color: colors-theme-dark.$baground-color-z-index-1;
+	body.light & {
+		background-color: colors-theme-light.$baground-color-z-index-1;
+	}
+}
+.presentation {
+	display: flex;
+	align-items: center;
+}
+
+
