@@ -31,7 +31,6 @@
 	}
 }
 /*structure HTML
-
 	<header class="top-navegation-bar justify-elements-in-screen">
 		<div class="top-navegation-bar__nav justify-elements-in-screen__container">
 			<div class="top-navegation-bar__item-container">
@@ -46,7 +45,7 @@
 /*///////////////////////////////////////////////////////////////////*/
 .main-menu {
 	display: flex;
-	gap: 0.5rem;
+	gap: 2rem;
 	
 	&__logo {
 		& > img {
