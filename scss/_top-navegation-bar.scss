@@ -15,43 +15,97 @@
 
 	&__nav {
 		display: flex;
-		justify-content: space-between;
 		padding: 10px;
+		padding-right: 2rem;
+		padding-left: 2rem;
 	}
 
-	&__item-container {
+	&__menus-container {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: 0.5rem;
+		width: 100%;
 	}
-}
-@media screen and (max-width: 850px){
-    .top-navegation-bar {
-		
-	}
-}
-/*structure HTML
-	<header class="top-navegation-bar justify-elements-in-screen">
-		<div class="top-navegation-bar__nav justify-elements-in-screen__container">
-			<div class="top-navegation-bar__item-container">
-			</div>
-		</div>
-	</header>
 
-	Emmed abbreviation
-	header.top-navegation-bar>div.top-navegation-bar__nav>div.top-navegation-bar__item-container
-	*/
-
-/*///////////////////////////////////////////////////////////////////*/
-.main-menu {
-	display: flex;
-	gap: 2rem;
-	
 	&__logo {
 		& > img {
 			width: 150px;
 		}
 	}
+
+	&__menu-separator {
+		display: flex;
+	}
+
+	&__button-container {
+		display: none;
+	}
+
+	&__button {
+		border: none;
+		background-color: transparent;
+		font-size: xx-large;
+		cursor: pointer;
+	}
+}
+@media screen and (max-width: 850px){
+    .top-navegation-bar {
+		&__menus-container {
+			background-color: colors-theme-dark.$baground-color-z-index-2;
+			body.light & {
+				background-color: colors-theme-light.$baground-color-z-index-2;
+			}
+			width: auto;
+			position: absolute;
+			transform: translateX(100%);
+			top: 60px;
+			justify-content: start;
+			&--show {
+				transform: unset;
+				right: 0;
+				display: flex;
+			}
+		}
+
+		&__nav {
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__button-container {
+			display: block;
+		}
+	}
+}
+/*structure HTML
+
+	<header class="top-navegation-bar justify-elements-in-screen">
+		<div class="top-navegation-bar__nav justify-elements-in-screen__container">
+			<a class="top-navegation-bar__logo" href=""><img src="" alt=""></a>
+			<div class="top-navegation-bar__menus-container">
+				<div class="top-navegation-bar__menu-separator">
+				</div>
+				<div class="top-navegation-bar__menu-separator">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	Emmed abbreviation
+	header.top-navegation-bar>a.top-navegation-bar__logo+div.top-navegation-bar__nav>div.top-navegation-bar__menu-separator*2
+	
+	JS
+	function showMenu() {
+    document.querySelector("#top-navegation-bar__menus-container").classList.toggle('top-navegation-bar__menus-container--show');
+	}
+	*/
+
+/*///////////////////////////////////////////////////////////////////*/
+.main-menu {
+	display: flex;
+	gap: 1rem;
+	
 	&__list {
 		display: flex;
 		text-decoration: none;

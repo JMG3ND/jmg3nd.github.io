@@ -4,7 +4,8 @@
 /*///////////////////////////////////////////////////////////////////*/
 .home-page-finder {
     box-shadow: 2px;
-    height: 384px;
+    padding: 10% 0;
+	gap: 5%;
     background-color: black;
     body.light & {
         background-color: #dfdfdf;
@@ -41,6 +42,14 @@
 			}
 		}
     }
+
+	@media screen and (max-width: 850px) {
+		.home-page-finder {
+			&__title {
+				width: 75%;
+			}
+		}
+	}
 }
 
 /*///////////////////////////////////////////////////////////////////*/
@@ -94,4 +103,18 @@
 	Emmet abbreviation
 	form.finder>input.finder__input+button.finder__send>i.fa-solid.fa-magnifying-glass
 	*/
+}
+
+@media screen and (max-width: 850px) {
+	.main-finder {
+		width: 75%;
+		
+		&__input {
+			font-size: small;
+		}
+		
+		&__send {
+			font-size: small;
+		}
+	}
 }

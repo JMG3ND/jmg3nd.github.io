@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .justify-elements-in-screen {
   width: 100%;
 }
 .justify-elements-in-screen__container {
-  max-width: 90rem;
+  max-width: 1440px;
   margin: 0 auto;
   height: 100%;
 }
@@ -38,31 +42,84 @@ body.light .top-navegation-bar {
 }
 .top-navegation-bar__nav {
   display: flex;
-  justify-content: space-between;
   padding: 10px;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
-.top-navegation-bar__item-container {
+.top-navegation-bar__menus-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
+  width: 100%;
+}
+.top-navegation-bar__logo > img {
+  width: 150px;
+}
+.top-navegation-bar__menu-separator {
+  display: flex;
+}
+.top-navegation-bar__button-container {
+  display: none;
+}
+.top-navegation-bar__button {
+  border: none;
+  background-color: transparent;
+  font-size: xx-large;
+  cursor: pointer;
 }
 
+@media screen and (max-width: 850px) {
+  .top-navegation-bar__menus-container {
+    background-color: #1b1b1b;
+    width: auto;
+    position: absolute;
+    transform: translateX(100%);
+    top: 60px;
+    justify-content: start;
+  }
+  body.light .top-navegation-bar__menus-container {
+    background-color: #ffffff;
+  }
+  .top-navegation-bar__menus-container--show {
+    transform: unset;
+    right: 0;
+    display: flex;
+  }
+  .top-navegation-bar__nav {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-navegation-bar__button-container {
+    display: block;
+  }
+}
 /*structure HTML
 
 	<header class="top-navegation-bar justify-elements-in-screen">
 		<div class="top-navegation-bar__nav justify-elements-in-screen__container">
-			<div class="top-navegation-bar__item-container">
+			<a class="top-navegation-bar__logo" href=""><img src="" alt=""></a>
+			<div class="top-navegation-bar__menus-container">
+				<div class="top-navegation-bar__menu-separator">
+				</div>
+				<div class="top-navegation-bar__menu-separator">
+				</div>
 			</div>
 		</div>
 	</header>
 
 	Emmed abbreviation
-	header.top-navegation-bar>div.top-navegation-bar__nav>div.top-navegation-bar__item-container
+	header.top-navegation-bar>a.top-navegation-bar__logo+div.top-navegation-bar__nav>div.top-navegation-bar__menu-separator*2
+
+	JS
+	function showMenu() {
+    document.querySelector("#top-navegation-bar__menus-container").classList.toggle('top-navegation-bar__menus-container--show');
+	}
 	*/
 /*///////////////////////////////////////////////////////////////////*/
 .main-menu {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   /*structure HTML
   <nav class="main-menu">
   	<a class="main-menu__logo" href=""><img src="" alt=""></a>
@@ -78,9 +135,6 @@ body.light .top-navegation-bar {
   Emmet abbreviation
   nav.main-menu>a.main-menu__logo+ul.main-menu__list>li.main-menu__content-item>a.main-menu__item+div.main-menu__sub-menu-container
   */
-}
-.main-menu__logo > img {
-  width: 150px;
 }
 .main-menu__list {
   display: flex;
@@ -365,7 +419,8 @@ body.light .footer {
 /*///////////////////////////////////////////////////////////////////*/
 .home-page-finder {
   box-shadow: 2px;
-  height: 384px;
+  padding: 10% 0;
+  gap: 5%;
   background-color: black;
 }
 body.light .home-page-finder {
@@ -395,6 +450,11 @@ body.light .home-page-finder__title--light {
 }
 body.light .home-page-finder__title--dark {
   display: none;
+}
+@media screen and (max-width: 850px) {
+  .home-page-finder .home-page-finder__title {
+    width: 75%;
+  }
 }
 
 /*///////////////////////////////////////////////////////////////////*/
@@ -445,6 +505,17 @@ body.light .main-finder__input {
   color: #0094c6;
 }
 
+@media screen and (max-width: 850px) {
+  .main-finder {
+    width: 75%;
+  }
+  .main-finder__input {
+    font-size: small;
+  }
+  .main-finder__send {
+    font-size: small;
+  }
+}
 body {
   background-color: #1b1b1b;
 }

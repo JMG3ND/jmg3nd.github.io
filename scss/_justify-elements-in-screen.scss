@@ -5,13 +5,13 @@
 }
 
 html {
-	font-size: 1em;
+	overflow-x: hidden;
 }
 
 .justify-elements-in-screen{
 	width: 100%;
 	&__container {
-		max-width: 90rem;
+		max-width: 1440px;
 		margin: 0 auto;
 		height: 100%;
 	}
