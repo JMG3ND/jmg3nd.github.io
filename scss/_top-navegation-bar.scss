@@ -53,18 +53,24 @@
     .top-navegation-bar {
 		&__menus-container {
 			background-color: colors-theme-dark.$baground-color-z-index-2;
+			border: 2px solid colors-theme-dark.$baground-color-z-index-1;
 			body.light & {
 				background-color: colors-theme-light.$baground-color-z-index-2;
+				border: 2px solid colors-theme-light.$baground-color-z-index-1;
 			}
-			width: auto;
-			position: absolute;
+			width: 100%;
+			max-width: 400px;
+			position: fixed;
 			transform: translateX(100%);
-			top: 60px;
-			justify-content: start;
+			transition: transform .5s;
+			top: 69px;
+			bottom: 0;
+			right: 0;
+			display: grid;
+			grid-auto-rows: max-content;
+
 			&--show {
 				transform: unset;
-				right: 0;
-				display: flex;
 			}
 		}
 
@@ -105,23 +111,13 @@
 .main-menu {
 	display: flex;
 	gap: 1rem;
-	
 	&__list {
 		display: flex;
 		text-decoration: none;
 		list-style-type: none;
-		.sub-menu {
-			.sub-menu {
-				&:hover {
-					background-color: colors-theme-dark.$baground-color-z-index-1;
-					body.light & {
-						background-color: colors-theme-light.$baground-color-z-index-1;
-					}
-				}
-			}
-		}
 	}
 	&__item {
+		position: relative;
 		display: block;
 		text-decoration: none;
 		padding: 15px;
@@ -141,27 +137,42 @@
 	&__content-item:hover &__sub-menu-container{
 		display: flex;
 	}
-
-	/*structure HTML
-	<nav class="main-menu">
-		<a class="main-menu__logo" href=""><img src="" alt=""></a>
-		<ul class="main-menu__list">
-			<li class="main-menu__content-item">
-				<a class="main-menu__item" href=""></a>
-				<div class="main-menu__sub-menu-container">
-				</div>
-			</li>
-		</ul>
-	</nav>
-
-	Emmet abbreviation
-	nav.main-menu>a.main-menu__logo+ul.main-menu__list>li.main-menu__content-item>a.main-menu__item+div.main-menu__sub-menu-container
-	*/
 }
+@media screen and (max-width: 850px) {
+	.main-menu {
+		
+
+		&__list {
+			display: block;
+		}
+
+		&__sub-menu-container {
+			position: unset;
+			display: flex;
+			width: 100%;
+		}
+	}
+}
+/*structure HTML
+<nav class="main-menu">
+	<a class="main-menu__logo" href=""><img src="" alt=""></a>
+	<ul class="main-menu__list">
+		<li class="main-menu__content-item">
+			<a class="main-menu__item" href=""></a>
+			<div class="main-menu__sub-menu-container">
+			</div>
+		</li>
+	</ul>
+</nav>
+
+Emmet abbreviation
+nav.main-menu>a.main-menu__logo+ul.main-menu__list>li.main-menu__content-item>a.main-menu__item+div.main-menu__sub-menu-container
+*/
 
 /*///////////////////////////////////////////////////////////////////*/
 .sub-menu {
-	display: inline-block;
+	display: block;
+	width: 100%;
 	border-radius: 5px;
 	padding: 0.5rem;
 	list-style-type: none;

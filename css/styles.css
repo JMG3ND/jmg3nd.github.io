@@ -72,19 +72,24 @@ body.light .top-navegation-bar {
 @media screen and (max-width: 850px) {
   .top-navegation-bar__menus-container {
     background-color: #1b1b1b;
-    width: auto;
-    position: absolute;
+    border: 2px solid #363636;
+    width: 100%;
+    max-width: 400px;
+    position: fixed;
     transform: translateX(100%);
-    top: 60px;
-    justify-content: start;
+    transition: transform 0.5s;
+    top: 69px;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-auto-rows: max-content;
   }
   body.light .top-navegation-bar__menus-container {
     background-color: #ffffff;
+    border: 2px solid #f9f9fb;
   }
   .top-navegation-bar__menus-container--show {
     transform: unset;
-    right: 0;
-    display: flex;
   }
   .top-navegation-bar__nav {
     justify-content: space-between;
@@ -120,34 +125,14 @@ body.light .top-navegation-bar {
 .main-menu {
   display: flex;
   gap: 1rem;
-  /*structure HTML
-  <nav class="main-menu">
-  	<a class="main-menu__logo" href=""><img src="" alt=""></a>
-  	<ul class="main-menu__list">
-  		<li class="main-menu__content-item">
-  			<a class="main-menu__item" href=""></a>
-  			<div class="main-menu__sub-menu-container">
-  			</div>
-  		</li>
-  	</ul>
-  </nav>
-
-  Emmet abbreviation
-  nav.main-menu>a.main-menu__logo+ul.main-menu__list>li.main-menu__content-item>a.main-menu__item+div.main-menu__sub-menu-container
-  */
 }
 .main-menu__list {
   display: flex;
   text-decoration: none;
   list-style-type: none;
 }
-.main-menu__list .sub-menu .sub-menu:hover {
-  background-color: #363636;
-}
-body.light .main-menu__list .sub-menu .sub-menu:hover {
-  background-color: #f9f9fb;
-}
 .main-menu__item {
+  position: relative;
   display: block;
   text-decoration: none;
   padding: 15px;
@@ -167,9 +152,35 @@ body.light .main-menu__item:hover {
   display: flex;
 }
 
+@media screen and (max-width: 850px) {
+  .main-menu__list {
+    display: block;
+  }
+  .main-menu__sub-menu-container {
+    position: unset;
+    display: flex;
+    width: 100%;
+  }
+}
+/*structure HTML
+<nav class="main-menu">
+	<a class="main-menu__logo" href=""><img src="" alt=""></a>
+	<ul class="main-menu__list">
+		<li class="main-menu__content-item">
+			<a class="main-menu__item" href=""></a>
+			<div class="main-menu__sub-menu-container">
+			</div>
+		</li>
+	</ul>
+</nav>
+
+Emmet abbreviation
+nav.main-menu>a.main-menu__logo+ul.main-menu__list>li.main-menu__content-item>a.main-menu__item+div.main-menu__sub-menu-container
+*/
 /*///////////////////////////////////////////////////////////////////*/
 .sub-menu {
-  display: inline-block;
+  display: block;
+  width: 100%;
   border-radius: 5px;
   padding: 0.5rem;
   list-style-type: none;
