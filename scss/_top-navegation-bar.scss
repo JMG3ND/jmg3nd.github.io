@@ -88,7 +88,7 @@
 
 	<header class="top-navegation-bar justify-elements-in-screen">
 		<div class="top-navegation-bar__nav justify-elements-in-screen__container">
-			<a class="top-navegation-bar__logo" href=""><img src="" alt=""></a>
+			<a class="top-navegation-bar__logo" href="#"><img src="" alt=""></a>
 			<div class="top-navegation-bar__menus-container">
 				<div class="top-navegation-bar__menu-separator">
 				</div>
@@ -155,10 +155,10 @@
 }
 /*structure HTML
 <nav class="main-menu">
-	<a class="main-menu__logo" href=""><img src="" alt=""></a>
+	<a class="main-menu__logo" href="#"><img src="" alt=""></a>
 	<ul class="main-menu__list">
 		<li class="main-menu__content-item">
-			<a class="main-menu__item" href=""></a>
+			<a class="main-menu__item" href="#"></a>
 			<div class="main-menu__sub-menu-container">
 			</div>
 		</li>
@@ -239,7 +239,7 @@ nav.main-menu>a.main-menu__logo+ul.main-menu__list>li.main-menu__content-item>a.
 	/*Structure HTML
 	<ul class="sub-menu">
 		<li class="sub-menu__content-item">
-			<a class="sub-menu__link" href="">
+			<a class="sub-menu__link" href="#">
 				<div class="sub-menu__icon sub-menu__icon--red"></div>
 				<div class="sub-menu__contain">
 					<div class="sub-menu__heading"></div>
