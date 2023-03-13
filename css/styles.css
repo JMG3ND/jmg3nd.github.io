@@ -210,10 +210,10 @@ html {
     padding: 15px;
     padding-right: 30px;
   }
-  .main-menu__item--active {
+  .main-menu__content-item--active .main-menu__item {
     background-color: #363636;
   }
-  body.light .main-menu__item--active {
+  body.light .main-menu__content-item--active .main-menu__item {
     background-color: #f9f9fb;
   }
   .main-menu__button {

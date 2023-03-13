@@ -188,12 +188,11 @@
 			text-decoration: none;
 			padding: 15px;
 			padding-right: 30px;
-			
-			&--active {
-				background-color: colors-theme-dark.$bagraund-color-top-level-entry-hover;
-				body.light & {
-					background-color: colors-theme-light.$bagraund-color-top-level-entry-hover;
-				}
+		}
+		&__content-item--active &__item{
+			background-color: colors-theme-dark.$bagraund-color-top-level-entry-hover;
+			body.light & {
+				background-color: colors-theme-light.$bagraund-color-top-level-entry-hover;
 			}
 		}
 		/*&__text{}*/
