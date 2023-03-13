@@ -181,7 +181,7 @@ html {
   body.light .main-menu__item:hover {
     background-color: #f9f9fb;
   }
-  .main-menu__icon {
+  .main-menu__button {
     display: none;
   }
   .main-menu__sub-menu-container {
@@ -210,27 +210,28 @@ html {
     padding: 15px;
     padding-right: 30px;
   }
-  .main-menu__item:hover {
+  .main-menu__item--active {
     background-color: #363636;
   }
-  body.light .main-menu__item:hover {
+  body.light .main-menu__item--active {
     background-color: #f9f9fb;
   }
-  .main-menu__icon {
+  .main-menu__button {
+    border: none;
+    background-color: transparent;
     transform: rotate(-90deg);
   }
-  .main-menu__content-item:hover .main-menu__icon {
+  .main-menu__content-item--active .main-menu__button {
     transform: rotate(0deg);
   }
   .main-menu__sub-menu-container {
     position: unset;
     display: flex;
     width: 100%;
-    height: 0px;
-    transition: height 0.3s;
+    height: 1px;
     overflow: hidden;
   }
-  .main-menu__content-item:hover .main-menu__sub-menu-container {
+  .main-menu__content-item--active .main-menu__sub-menu-container {
     height: auto;
   }
 }
