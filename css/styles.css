@@ -5,7 +5,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  font-family: sans-serif;
 }
 
 .justify-elements-in-screen {
@@ -54,11 +54,9 @@ html {
     gap: 0.5rem;
     width: 100%;
   }
-  .top-navegation-bar__logo > img {
-    width: 150px;
-  }
   .top-navegation-bar__menu-separator {
     display: flex;
+    gap: 1rem;
   }
   .top-navegation-bar__button-container {
     display: none;
@@ -397,7 +395,7 @@ ul.sub-menu>li.sub-menu__content-item*<!--NOMBERITEMS-->>a.sub-menu__link>div.su
 .switcher-theme {
   margin-left: 10px;
   display: inline-block;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   padding: 0.3rem 0.5rem;
   background-color: transparent;
   border: none;
@@ -570,17 +568,10 @@ body.light .footer {
 /*///////////////////////////////////////////////////////////////////*/
 .home-page-finder {
   box-shadow: 2px;
-  padding: 10% 0;
-  gap: 5%;
   background-color: black;
 }
 body.light .home-page-finder {
   background-color: #dfdfdf;
-}
-.home-page-finder__container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .home-page-finder__form {
   display: flex;
@@ -588,6 +579,8 @@ body.light .home-page-finder {
   width: 100%;
   height: 100%;
   justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px 0px;
   align-items: center;
 }
 .home-page-finder__title {
@@ -602,12 +595,12 @@ body.light .home-page-finder__title--light {
 body.light .home-page-finder__title--dark {
   display: none;
 }
+
 @media screen and (max-width: 850px) {
-  .home-page-finder .home-page-finder__title {
+  .home-page-finder__title {
     width: 75%;
   }
 }
-
 /*///////////////////////////////////////////////////////////////////*/
 .main-finder {
   position: relative;

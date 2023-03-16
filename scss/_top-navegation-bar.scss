@@ -26,13 +26,9 @@
 			gap: 0.5rem;
 			width: 100%;
 		}
-		&__logo {
-			& > img {
-				width: 150px;
-			}
-		}
 		&__menu-separator {
 			display: flex;
+			gap: 1rem;
 		}
 		&__button-container {
 			display: none;
@@ -392,7 +388,7 @@ ul.sub-menu>li.sub-menu__content-item*<!--NOMBERITEMS-->>a.sub-menu__link>div.su
 .switcher-theme {
 	margin-left: 10px;
 	display: inline-block;
-	border-radius: 0.25rem;
+	border-radius: 1rem;
 	padding: 0.3rem 0.5rem;
 	background-color: transparent;
 	border: none;
