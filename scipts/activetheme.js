@@ -4,7 +4,7 @@ btnSwitch.addEventListener('click', () => {
     document.body.classList.toggle('light');
 
     if(localStorage.getItem("theme") == "light"){
-        localStorage.setItem("theme","");
+        localStorage.removeItem("theme");
     }else{
         localStorage.setItem("theme","light");
     }
