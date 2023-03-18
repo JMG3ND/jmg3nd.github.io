@@ -15,8 +15,17 @@
     }
 }
 
+@media screen and (max-width: 850px) {
+    .footer {
+        &__nav {
+            justify-content: center;
+        }
+    }
+}
+
 /*///////////////////////////////////////////////////////////////////*/
-.social-networks-list {
+@media screen and (min-width: 851px) {
+    .social-networks-list {
     list-style-type: none;
     display: flex;
     margin: 1rem;
@@ -78,4 +87,36 @@
     Emmed abbreviation
     ul.social-networks-list>li.social-networks-list__item-container*<!--Numero de items-->>a.social-networks-list__item>i.fa-brands.fa-facebook+span.social-networks-list__text.social-networks-list__text--facebook
     */
+}
+}
+
+
+@media screen and (max-width: 850px) {
+    .social-networks-list {
+        list-style-type: none;
+        margin: 1rem;
+        display: flex;
+    
+        *{
+            background-color: transparent;
+        }
+    
+        &__item {
+            text-decoration: none;
+            display: flex;
+            font-size: x-large;
+            align-items: center;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .fa-brands {
+            width: 2rem;
+            padding: 5px;
+        }
+        &__text {
+            width: 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+    }
 }

@@ -1,0 +1,58 @@
+@use 'colors-theme-dark.scss';
+@use 'colors-theme-light.scss';
+
+.home-page-information {
+    &__title {
+        padding: 1rem;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+    &__item-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+        gap: 1rem;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 700px) {
+    .home-page-information {
+        &__item-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.article-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    border-radius: 20px;
+    padding: 1rem;
+    background-color: colors-theme-dark.$baground-color-z-index-1;
+    body.light & {
+		background-color: colors-theme-light.$baground-color-z-index-1;
+	}
+    &__image {
+        width: 150px;
+    }
+    &__title {
+        margin-bottom: 1rem;
+    }
+    &__link-container {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+    }
+}
+
+.button-link {
+    text-decoration: none;
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px;
+    background-color: colors-theme-dark.$baground-color-z-index-3;
+    body.light & {
+        background-color: colors-theme-light.$baground-color-z-index-3;
+    }
+}

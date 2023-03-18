@@ -507,64 +507,97 @@ body.light .footer {
   justify-content: end;
 }
 
+@media screen and (max-width: 850px) {
+  .footer__nav {
+    justify-content: center;
+  }
+}
 /*///////////////////////////////////////////////////////////////////*/
-.social-networks-list {
-  list-style-type: none;
-  display: flex;
-  margin: 1rem;
-  /*Structure HTML
-  <ul class="social-networks-list">
-      <li class="social-networks-list__item-container">
-          <a class="social-networks-list__item" href="#">
-              <i class="fa-brands fa-facebook"></i>
-              <span class="social-networks-list__text social-networks-list__text--facebook">Facebook</span>
-          </a>
-      </li>
-  </ul>
+@media screen and (min-width: 851px) {
+  .social-networks-list {
+    list-style-type: none;
+    display: flex;
+    margin: 1rem;
+    /*Structure HTML
+    <ul class="social-networks-list">
+        <li class="social-networks-list__item-container">
+            <a class="social-networks-list__item" href="#">
+                <i class="fa-brands fa-facebook"></i>
+                <span class="social-networks-list__text social-networks-list__text--facebook">Facebook</span>
+            </a>
+        </li>
+    </ul>
 
-  Emmed abbreviation
-  ul.social-networks-list>li.social-networks-list__item-container*<!--Numero de items-->>a.social-networks-list__item>i.fa-brands.fa-facebook+span.social-networks-list__text.social-networks-list__text--facebook
-  */
+    Emmed abbreviation
+    ul.social-networks-list>li.social-networks-list__item-container*<!--Numero de items-->>a.social-networks-list__item>i.fa-brands.fa-facebook+span.social-networks-list__text.social-networks-list__text--facebook
+    */
+  }
+  .social-networks-list * {
+    background-color: transparent;
+  }
+  .social-networks-list__item {
+    text-decoration: none;
+    display: flex;
+    font-size: x-large;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .social-networks-list__item:hover .fa-facebook, .social-networks-list__item:hover .social-networks-list__text--facebook {
+    color: #077ae9;
+  }
+  .social-networks-list__item:hover .fa-twitter, .social-networks-list__item:hover .social-networks-list__text--twitter {
+    color: #1c99e6;
+  }
+  .social-networks-list__item:hover .fa-instagram, .social-networks-list__item:hover .social-networks-list__text--instagram {
+    color: #c30073;
+  }
+  .social-networks-list__item:hover .fa-youtube, .social-networks-list__item:hover .social-networks-list__text--youtube {
+    color: #f10002;
+  }
+  .social-networks-list__item:hover .fa-whatsapp, .social-networks-list__item:hover .social-networks-list__text--whatsapp {
+    color: #1acc3e;
+  }
+  .social-networks-list .fa-brands {
+    width: 2rem;
+    padding: 5px;
+  }
+  .social-networks-list__text {
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .social-networks-list__item:hover .social-networks-list__text {
+    width: 6rem;
+  }
 }
-.social-networks-list * {
-  background-color: transparent;
+@media screen and (max-width: 850px) {
+  .social-networks-list {
+    list-style-type: none;
+    margin: 1rem;
+    display: flex;
+  }
+  .social-networks-list * {
+    background-color: transparent;
+  }
+  .social-networks-list__item {
+    text-decoration: none;
+    display: flex;
+    font-size: x-large;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .social-networks-list .fa-brands {
+    width: 2rem;
+    padding: 5px;
+  }
+  .social-networks-list__text {
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
 }
-.social-networks-list__item {
-  text-decoration: none;
-  display: flex;
-  font-size: x-large;
-  align-items: center;
-  border-radius: 5px;
-  padding: 5px;
-}
-.social-networks-list__item:hover .fa-facebook, .social-networks-list__item:hover .social-networks-list__text--facebook {
-  color: #077ae9;
-}
-.social-networks-list__item:hover .fa-twitter, .social-networks-list__item:hover .social-networks-list__text--twitter {
-  color: #1c99e6;
-}
-.social-networks-list__item:hover .fa-instagram, .social-networks-list__item:hover .social-networks-list__text--instagram {
-  color: #c30073;
-}
-.social-networks-list__item:hover .fa-youtube, .social-networks-list__item:hover .social-networks-list__text--youtube {
-  color: #f10002;
-}
-.social-networks-list__item:hover .fa-whatsapp, .social-networks-list__item:hover .social-networks-list__text--whatsapp {
-  color: #1acc3e;
-}
-.social-networks-list .fa-brands {
-  width: 2rem;
-  padding: 5px;
-}
-.social-networks-list__text {
-  width: 0;
-  overflow: hidden;
-  transition: 0.3s;
-}
-.social-networks-list__item:hover .social-networks-list__text {
-  width: 6rem;
-}
-
 /*///////////////////////////////////////////////////////////////////*/
 .home-page-finder {
   box-shadow: 2px;
@@ -660,6 +693,58 @@ body.light .main-finder__input {
     font-size: small;
   }
 }
+.home-page-information__title {
+  padding: 1rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+.home-page-information__item-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  gap: 1rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+  .home-page-information__item-container {
+    grid-template-columns: 1fr;
+  }
+}
+.article-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  border-radius: 20px;
+  padding: 1rem;
+  background-color: #363636;
+}
+body.light .article-item {
+  background-color: #f9f9fb;
+}
+.article-item__image {
+  width: 150px;
+}
+.article-item__title {
+  margin-bottom: 1rem;
+}
+.article-item__link-container {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.button-link {
+  text-decoration: none;
+  padding: 10px 40px 10px 40px;
+  border-radius: 10px;
+  background-color: black;
+}
+body.light .button-link {
+  background-color: #dfdfdf;
+}
+
 body {
   background-color: #1b1b1b;
 }
@@ -676,13 +761,6 @@ body.light * {
 
 .imposter {
   height: 100vh;
-}
-
-header + section, section * {
-  background-color: #363636;
-}
-body.light header + section, body.light section * {
-  background-color: #f9f9fb;
 }
 
 .presentation {

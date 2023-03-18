@@ -4,9 +4,9 @@
 /*///////////////////////////////////////////////////////////////////*/
 .home-page-finder {
     box-shadow: 2px;
-    background-color: black;
+    background-color: colors-theme-dark.$baground-color-z-index-3;
     body.light & {
-        background-color: #dfdfdf;
+        background-color: colors-theme-light.$baground-color-z-index-3;
     }
     &__form {
         display: flex;
