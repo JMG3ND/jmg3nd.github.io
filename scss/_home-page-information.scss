@@ -1,6 +1,7 @@
 @use 'colors-theme-dark.scss';
 @use 'colors-theme-light.scss';
 
+/*home-page-information//////////////////////////////////////////////*/
 .home-page-information {
     &__title {
         padding: 1rem;
@@ -23,7 +24,6 @@
         }
     }
 }
-
 .article-item {
     position: relative;
     display: grid;
@@ -46,7 +46,24 @@
         bottom: 1rem;
     }
 }
-
+/*Structure HTML
+<!--block-->
+<article class="article-item">
+    <div class="article-item__image-container">
+        <img class="article-item__image" src="images/home-page-article/cubo-dos-por-dos.png" alt="Cubo de rubik 2x2">
+    </div>
+    <div class="article-item__informtaion-container">
+        <h2 class="article-item__title">CUBO 2X2</h2>
+        <p class="article-item__description">
+            Algoritmos para resolver el cubo de rubik 2X2
+        </p>
+    </div>
+    <div class="article-item__link-container">
+        <!--block-->
+        <a class="button-link" href="#">Ir</a>
+    </div>
+</article>
+*/
 .button-link {
     text-decoration: none;
     padding: 10px 40px 10px 40px;
@@ -56,3 +73,7 @@
         background-color: colors-theme-light.$baground-color-z-index-3;
     }
 }
+/*Structure HTML
+<!--block-->
+<a class="button-link" href="#">Ir</a>
+*/

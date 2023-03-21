@@ -153,7 +153,7 @@ html {
 	function showMenu() {
     document.querySelector("#top-navegation-bar__menus-container").classList.toggle('top-navegation-bar__menus-container--show');
 	}
-	*/
+*/
 /*main-menu//////////////////////////////////////////////////////////*/
 @media screen and (min-width: 851px) {
   .main-menu {
@@ -693,6 +693,7 @@ body.light .main-finder__input {
     font-size: small;
   }
 }
+/*home-page-information//////////////////////////////////////////////*/
 .home-page-information__title {
   padding: 1rem;
   max-width: 850px;
@@ -735,6 +736,24 @@ body.light .article-item {
   bottom: 1rem;
 }
 
+/*Structure HTML
+<!--block-->
+<article class="article-item">
+    <div class="article-item__image-container">
+        <img class="article-item__image" src="images/home-page-article/cubo-dos-por-dos.png" alt="Cubo de rubik 2x2">
+    </div>
+    <div class="article-item__informtaion-container">
+        <h2 class="article-item__title">CUBO 2X2</h2>
+        <p class="article-item__description">
+            Algoritmos para resolver el cubo de rubik 2X2
+        </p>
+    </div>
+    <div class="article-item__link-container">
+        <!--block-->
+        <a class="button-link" href="#">Ir</a>
+    </div>
+</article>
+*/
 .button-link {
   text-decoration: none;
   padding: 10px 40px 10px 40px;
@@ -745,6 +764,10 @@ body.light .button-link {
   background-color: #dfdfdf;
 }
 
+/*Structure HTML
+<!--block-->
+<a class="button-link" href="#">Ir</a>
+*/
 body {
   background-color: #1b1b1b;
 }
@@ -757,10 +780,6 @@ body.light {
 }
 body.light * {
   color: #000000;
-}
-
-.imposter {
-  height: 100vh;
 }
 
 .presentation {
