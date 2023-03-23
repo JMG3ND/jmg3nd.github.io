@@ -736,6 +736,7 @@ body.light .article-item {
 }
 .article-item__image {
   width: 100%;
+  padding: 10px;
   background-color: #1b1b1b;
   border-radius: 10px;
 }
@@ -754,21 +755,26 @@ body.light .article-item__image {
 
 /*Structure HTML
 <!--block-->
-<article class="article-item">
+  <section class="article-item">
     <div class="article-item__image-container">
-        <img class="article-item__image" src="images/home-page-article/cubo-dos-por-dos.png" alt="Cubo de rubik 2x2">
+      <img class="article-item__image" src="images/home-page-article/cubo-dos-por-dos.png"
+        alt="Cubo de rubik 2x2">
     </div>
-    <div class="article-item__informtaion-container">
-        <h2 class="article-item__title">CUBO 2X2</h2>
-        <p class="article-item__description">
-            Algoritmos para resolver el cubo de rubik 2X2
-        </p>
+    <div class="article-item__informataion-container">
+      <header class="article-item__title-container">
+          <h2 class="article-item__title">CUBO 2X2</h2>
+      </header>
+      <article class="article-item__description-container">
+          <p class="article-item__description">
+          Algoritmos para resolver el cubo de rubik dos por dos
+          </p>
+      </article>
+      <footer class="article-item__link-container">
+          <!--block-->
+          <a class="button-link" href="#">Ir</a>
+      </footer>
     </div>
-    <div class="article-item__link-container">
-        <!--block-->
-        <a class="button-link" href="#">Ir</a>
-    </div>
-</article>
+  </section>
 */
 .button-link {
   display: inline-block;
