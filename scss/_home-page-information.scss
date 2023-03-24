@@ -4,16 +4,16 @@
 /*home-page-information//////////////////////////////////////////////*/
 .home-page-information {
   &__title {
+    margin: 0 auto;
     padding: 1rem;
     max-width: 850px;
-    margin: 0 auto;
   }
 
   &__item-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0.5rem;
-    gap: 1rem;
+    gap: 0.5rem;
     max-width: 850px;
     margin: 0 auto;
   }
@@ -76,24 +76,20 @@
   }
 }
 
-@media screen and (max-width: 430px) {
-  .article-item {}
-}
-
 /*Structure HTML
 <!--block-->
   <section class="article-item">
     <div class="article-item__image-container">
-      <img class="article-item__image" src="images/home-page-article/cubo-dos-por-dos.png"
+      <img class="article-item__image" src=""
         alt="Cubo de rubik 2x2">
     </div>
     <div class="article-item__informataion-container">
       <header class="article-item__title-container">
-          <h2 class="article-item__title">CUBO 2X2</h2>
+          <h2 class="article-item__title"></h2>
       </header>
       <article class="article-item__description-container">
           <p class="article-item__description">
-          Algoritmos para resolver el cubo de rubik dos por dos
+          
           </p>
       </article>
       <footer class="article-item__link-container">

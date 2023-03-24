@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.css">
 
   <!--Con esto obligamos a los dispositivos móviles a decirnos cuál es el ancho de la pantalla real al momento de realizar la carga de la página-->
   <meta name="viewport" content="width=device-width">
@@ -21,93 +21,8 @@
 <body>
 
   <!--block-->
-  <header class="top-navegation-bar justify-elements-in-screen">
-    <div class="top-navegation-bar__nav justify-elements-in-screen__container">
-      <a class="top-navegation-bar__logo" href="index.html"><img src="images/logo-solvedrubik-150.png"
-          alt="logo-solvedrubik"></a>
-      <div class="top-navegation-bar__menus-container" id="top-navegation-bar__menus-container">
-        <div class="top-navegation-bar__menu-separator top-navegation-bar__menu-separator--uno">
-          <!--block-->
-          <nav class="main-menu">
-            <ul class="main-menu__list">
-              <li class="main-menu__content-item main-menu__content-item--hamburguer">
-                <a class="main-menu__item" href="#">
-                  <span class="main-menu__text">CUBOS</span>
-                  <button class="main-menu__button"><i class="fa-solid fa-caret-down"></i></button>
-                </a>
-                <div class="main-menu__sub-menu-container">
-                  <!--block-->
-                  <ul class="sub-menu">
-                    <li class="sub-menu__content-item dospordos-link-container">
-                      <a class="sub-menu__link" href="#">
-                        <div class="sub-menu__icon sub-menu__icon--red"></div>
-                        <div class="sub-menu__contain">
-                          <div class="sub-menu__heading">CUBO 2 X 2</div>
-                          <p class="sub-menu__description">Algoritmos del cubo dos por dos</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="sub-menu__content-item tresportres-link-container">
-                      <a class="sub-menu__link" href="#">
-                        <div class="sub-menu__icon sub-menu__icon--green"></div>
-                        <div class="sub-menu__contain">
-                          <div class="sub-menu__heading">CUBO 3 X 3</div>
-                          <p class="sub-menu__description">Algoritmos del cubo tres por tres
-                          </p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="sub-menu__content-item cuatroporcuatro-link-container">
-                      <a class="sub-menu__link" href="#">
-                        <div class="sub-menu__icon sub-menu__icon--orange"></div>
-                        <div class="sub-menu__contain">
-                          <div class="sub-menu__heading">CUBO 4 X 4</div>
-                          <p class="sub-menu__description">Algoritmos del cubo cuatro por
-                            cuatro</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="sub-menu__content-item cincoporcinco-link-container">
-                      <a class="sub-menu__link" href="#">
-                        <div class="sub-menu__icon sub-menu__icon--blue"></div>
-                        <div class="sub-menu__contain">
-                          <div class="sub-menu__heading">CUBO 5 X 5</div>
-                          <p class="sub-menu__description">Algoritmos del cubo cinco por cinco
-                          </p>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="main-menu__content-item">
-                <a class="main-menu__item" href="#">TIENDA</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="top-navegation-bar__menu-separator top-navegation-bar__menu-separator--dos">
-          <!--block-->
-          <button class="switcher-theme" id="switcher-theme">
-            <span class="switcher-theme__button-wrap">
-              <i class="fa-solid fa-moon"></i>
-              <i class="fa-solid fa-sun"></i>
-              Tema
-            </span>
-          </button>
-
-          <!--block-->
-          <form class="finder" action="">
-            <input class="finder__input" type="text" placeholder="Buscar...">
-            <button class="finder__send"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
-        </div>
-      </div>
-      <div class="top-navegation-bar__button-container">
-        <button onclick="showMenu()" class="top-navegation-bar__button" id="top-navegation-bar__button"><i
-            class="fa-solid fa-bars"></i></button>
-      </div>
-    </div>
+  <header w3-include-html="global-block-elements/top-navegation-bar.html"
+    class="top-navegation-bar justify-elements-in-screen">
   </header>
 
   <main>
@@ -133,7 +48,7 @@
       <section class="home-page-information justify-elements-in-screen">
         <div class="home-page-information__container justify-elements-in-screen__container">
           <header class="home-page-information__title-container">
-            <h1 class="home-page-information__title">Artículos</h1>
+            <h1 class="home-page-information__title">ARTÍCULOS</h1>
           </header>
           <article class="home-page-information__item-container">
 
@@ -224,7 +139,7 @@
                 </footer>
               </div>
             </section>
-            
+
           </article>
         </div>
       </section>
@@ -232,45 +147,11 @@
   </main>
 
   <!--block-->
-  <footer class="footer justify-elements-in-screen">
-    <nav class="footer__nav justify-elements-in-screen__container">
-      <!--block-->
-      <ul class="social-networks-list">
-        <li class="social-networks-list__item-container">
-          <a class="social-networks-list__item" href="#">
-            <i class="fa-brands fa-facebook"></i>
-            <span class="social-networks-list__text social-networks-list__text--facebook">Facebook</span>
-          </a>
-        </li>
-        <li class="social-networks-list__item-container">
-          <a class="social-networks-list__item" href="#">
-            <i class="fa-brands fa-twitter"></i>
-            <span class="social-networks-list__text social-networks-list__text--twitter">Twitter</span>
-          </a>
-        </li>
-        <li class="social-networks-list__item-container">
-          <a class="social-networks-list__item" href="#">
-            <i class="fa-brands fa-instagram"></i>
-            <span class="social-networks-list__text social-networks-list__text--instagram">Instagram</span>
-          </a>
-        </li>
-        <li class="social-networks-list__item-container">
-          <a class="social-networks-list__item" href="#">
-            <i class="fa-brands fa-youtube"></i>
-            <span class="social-networks-list__text social-networks-list__text--youtube">Youtube</span>
-          </a>
-        </li>
-        <li class="social-networks-list__item-container">
-          <a class="social-networks-list__item" href="#">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span class="social-networks-list__text social-networks-list__text--whatsapp">Whatsapp</span>
-          </a>
-        </li>
-      </ul>
+  <footer w3-include-html="global-block-elements\footer.html" class="footer justify-elements-in-screen">
 
-    </nav>
   </footer>
 
+  <script src="scipts/w3-include-html.js"></script>
   <script src="scipts/define-theme.js"></script>
   <script src="scipts/activetheme.js"></script>
   <script src="scipts/top-navegation-bar__button.js"></script>

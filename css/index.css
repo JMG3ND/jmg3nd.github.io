@@ -8,13 +8,26 @@ html {
   font-family: sans-serif;
 }
 
+body {
+  background-color: #1b1b1b;
+}
+body * {
+  color: #CDCDCD;
+}
+
+body.light {
+  background-color: #ffffff;
+}
+body.light * {
+  color: #000000;
+}
+
 .justify-elements-in-screen {
   width: 100%;
 }
 .justify-elements-in-screen__container {
   max-width: 1440px;
   margin: 0 auto;
-  height: 100%;
 }
 
 /*
@@ -543,19 +556,24 @@ body.light .footer {
     border-radius: 5px;
     padding: 5px;
   }
-  .social-networks-list__item:hover .fa-facebook, .social-networks-list__item:hover .social-networks-list__text--facebook {
+  .social-networks-list__item:hover .fa-facebook,
+  .social-networks-list__item:hover .social-networks-list__text--facebook {
     color: #077ae9;
   }
-  .social-networks-list__item:hover .fa-twitter, .social-networks-list__item:hover .social-networks-list__text--twitter {
+  .social-networks-list__item:hover .fa-twitter,
+  .social-networks-list__item:hover .social-networks-list__text--twitter {
     color: #1c99e6;
   }
-  .social-networks-list__item:hover .fa-instagram, .social-networks-list__item:hover .social-networks-list__text--instagram {
+  .social-networks-list__item:hover .fa-instagram,
+  .social-networks-list__item:hover .social-networks-list__text--instagram {
     color: #c30073;
   }
-  .social-networks-list__item:hover .fa-youtube, .social-networks-list__item:hover .social-networks-list__text--youtube {
+  .social-networks-list__item:hover .fa-youtube,
+  .social-networks-list__item:hover .social-networks-list__text--youtube {
     color: #f10002;
   }
-  .social-networks-list__item:hover .fa-whatsapp, .social-networks-list__item:hover .social-networks-list__text--whatsapp {
+  .social-networks-list__item:hover .fa-whatsapp,
+  .social-networks-list__item:hover .social-networks-list__text--whatsapp {
     color: #1acc3e;
   }
   .social-networks-list .fa-brands {
@@ -695,15 +713,15 @@ body.light .main-finder__input {
 }
 /*home-page-information//////////////////////////////////////////////*/
 .home-page-information__title {
+  margin: 0 auto;
   padding: 1rem;
   max-width: 850px;
-  margin: 0 auto;
 }
 .home-page-information__item-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0.5rem;
-  gap: 1rem;
+  gap: 0.5rem;
   max-width: 850px;
   margin: 0 auto;
 }
@@ -757,16 +775,16 @@ body.light .article-item__image {
 <!--block-->
   <section class="article-item">
     <div class="article-item__image-container">
-      <img class="article-item__image" src="images/home-page-article/cubo-dos-por-dos.png"
+      <img class="article-item__image" src=""
         alt="Cubo de rubik 2x2">
     </div>
     <div class="article-item__informataion-container">
       <header class="article-item__title-container">
-          <h2 class="article-item__title">CUBO 2X2</h2>
+          <h2 class="article-item__title"></h2>
       </header>
       <article class="article-item__description-container">
           <p class="article-item__description">
-          Algoritmos para resolver el cubo de rubik dos por dos
+
           </p>
       </article>
       <footer class="article-item__link-container">
@@ -791,23 +809,5 @@ body.light .button-link {
 <!--block-->
 <a class="button-link" href="#">Ir</a>
 */
-body {
-  background-color: #1b1b1b;
-}
-body * {
-  color: #CDCDCD;
-}
 
-body.light {
-  background-color: #ffffff;
-}
-body.light * {
-  color: #000000;
-}
-
-.presentation {
-  display: flex;
-  align-items: center;
-}
-
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=index.css.map */

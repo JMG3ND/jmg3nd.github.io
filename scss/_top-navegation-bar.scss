@@ -3,113 +3,132 @@
 
 /*top-navegation-bar/////////////////////////////////////////////////*/
 @media screen and (min-width: 851px) {
-	.top-navegation-bar {
-		position: sticky;
-		top: 0;
-		z-index: 3;
-		background-color: colors-theme-dark.$baground-color-z-index-2;
-		border-bottom: 1px solid colors-theme-dark.$border-box-color;
-		body.light & {
-			background-color: colors-theme-light.$baground-color-z-index-2;
-			border-bottom: 1px solid colors-theme-light.$border-box-color;
-		}
-		&__nav {
-			display: flex;
-			padding: 10px;
-			padding-right: 2rem;
-			padding-left: 2rem;
-		}
-		&__menus-container {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: 0.5rem;
-			width: 100%;
-		}
-		&__menu-separator {
-			display: flex;
-			gap: 1rem;
-		}
-		&__button-container {
-			display: none;
-		}
-		&__button {
-			border: none;
-			background-color: transparent;
-			font-size: xx-large;
-			cursor: pointer;
-		}
-	}
-}
-@media screen and (max-width: 850px) {
-    .top-navegation-bar {
-		position: sticky;
-		top: 0;
-		z-index: 3;
-		background-color: colors-theme-dark.$baground-color-z-index-2;
-		border-bottom: 1px solid colors-theme-dark.$border-box-color;
-		body.light & {
-			background-color: colors-theme-light.$baground-color-z-index-2;
-			border-bottom: 1px solid colors-theme-light.$border-box-color;
-		}
-		&__nav {
-			display: flex;
-			padding: 10px;
-			padding-right: 2rem;
-			padding-left: 2rem;
-			justify-content: space-between;
-			align-items: center;
-		}
-		&__menus-container {
-			background-color: colors-theme-dark.$baground-color-z-index-2;
-			border: 2px solid colors-theme-dark.$baground-color-z-index-1;
-			body.light & {
-				background-color: colors-theme-light.$baground-color-z-index-2;
-				border: 2px solid colors-theme-light.$baground-color-z-index-1;
-			}
-			width: 80%;
-			max-width: 400px;
-			position: fixed;
-			transform: translateX(100%);
-			transition: transform .5s;
-			top: 60px;
-			bottom: 0;
-			right: 0;
-			display: grid;
-			grid-auto-rows: max-content;
+  .top-navegation-bar {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: colors-theme-dark.$baground-color-z-index-2;
+    border-bottom: 1px solid colors-theme-dark.$border-box-color;
 
-			&--show {
-				transform: unset;
-			}
-		}
-		&__logo {
-			& > img {
-				width: 120px;
-			}
-		}
-		/*&__menu-separator {display: block}*/
-		&__button-container {
-			display: block;
-		}
-		&__button {
-			border: none;
-			background-color: transparent;
-			font-size: x-large;
-			//cursor: pointer;
-		}
-		&__menu-separator {
-			margin-top: 0.5rem;
-			&--uno {
-				order: 2;
-			}
-			&--dos {
-				order: 1;
-				display: flex;
-				justify-content: space-between;
-			}
-		}
-	}
+    body.light & {
+      background-color: colors-theme-light.$baground-color-z-index-2;
+      border-bottom: 1px solid colors-theme-light.$border-box-color;
+    }
+
+    &__nav {
+      display: flex;
+      padding: 10px;
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+
+    &__menus-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    &__menu-separator {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &__button-container {
+      display: none;
+    }
+
+    &__button {
+      border: none;
+      background-color: transparent;
+      font-size: xx-large;
+      cursor: pointer;
+    }
+  }
 }
+
+@media screen and (max-width: 850px) {
+  .top-navegation-bar {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: colors-theme-dark.$baground-color-z-index-2;
+    border-bottom: 1px solid colors-theme-dark.$border-box-color;
+
+    body.light & {
+      background-color: colors-theme-light.$baground-color-z-index-2;
+      border-bottom: 1px solid colors-theme-light.$border-box-color;
+    }
+
+    &__nav {
+      display: flex;
+      padding: 10px;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__menus-container {
+      background-color: colors-theme-dark.$baground-color-z-index-2;
+      border: 2px solid colors-theme-dark.$baground-color-z-index-1;
+
+      body.light & {
+        background-color: colors-theme-light.$baground-color-z-index-2;
+        border: 2px solid colors-theme-light.$baground-color-z-index-1;
+      }
+
+      width: 80%;
+      max-width: 400px;
+      position: fixed;
+      transform: translateX(100%);
+      transition: transform .5s;
+      top: 60px;
+      bottom: 0;
+      right: 0;
+      display: grid;
+      grid-auto-rows: max-content;
+
+      &--show {
+        transform: unset;
+      }
+    }
+
+    &__logo {
+      &>img {
+        width: 120px;
+      }
+    }
+
+    /*&__menu-separator {display: block}*/
+    &__button-container {
+      display: block;
+    }
+
+    &__button {
+      border: none;
+      background-color: transparent;
+      font-size: x-large;
+      //cursor: pointer;
+    }
+
+    &__menu-separator {
+      margin-top: 0.5rem;
+
+      &--uno {
+        order: 2;
+      }
+
+      &--dos {
+        order: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
 /*structure HTML
 	<header class="top-navegation-bar justify-elements-in-screen">
 		<div class="top-navegation-bar__nav justify-elements-in-screen__container">
@@ -134,84 +153,100 @@
 
 /*main-menu//////////////////////////////////////////////////////////*/
 @media screen and (min-width: 851px) {
-	.main-menu {
-		display: flex;
-		gap: 1rem;
-		&__list {
-			display: flex;
-			text-decoration: none;
-			list-style-type: none;
-		}
-		&__item {
-			position: relative;
-			display: block;
-			text-decoration: none;
-			padding: 15px;
-			border-radius: 5PX;
-			
-			&:hover {
-				background-color: colors-theme-dark.$bagraund-color-top-level-entry-hover;
-				body.light & {
-					background-color: colors-theme-light.$bagraund-color-top-level-entry-hover;
-				}
-			}
-		}
-		/*&__text{}*/
-		&__button{
-			display: none;
-		}
-		&__sub-menu-container {
-			display: none;
-			position: absolute;
-		}
-		&__content-item:hover &__sub-menu-container{
-			display: flex;
-		}
-	}
+  .main-menu {
+    display: flex;
+    gap: 1rem;
+
+    &__list {
+      display: flex;
+      text-decoration: none;
+      list-style-type: none;
+    }
+
+    &__item {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 5PX;
+
+      &:hover {
+        background-color: colors-theme-dark.$bagraund-color-top-level-entry-hover;
+
+        body.light & {
+          background-color: colors-theme-light.$bagraund-color-top-level-entry-hover;
+        }
+      }
+    }
+
+    /*&__text{}*/
+    &__button {
+      display: none;
+    }
+
+    &__sub-menu-container {
+      display: none;
+      position: absolute;
+    }
+
+    &__content-item:hover &__sub-menu-container {
+      display: flex;
+    }
+  }
 }
+
 @media screen and (max-width: 850px) {
-	.main-menu {
-		gap: 1rem;
-		&__list {
-			text-decoration: none;
-			list-style-type: none;
-		}
-		&__item {
-			position: relative;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			text-decoration: none;
-			padding: 15px;
-			padding-right: 30px;
-		}
-		&__content-item--active &__item{
-			background-color: colors-theme-dark.$bagraund-color-top-level-entry-hover;
-			body.light & {
-				background-color: colors-theme-light.$bagraund-color-top-level-entry-hover;
-			}
-		}
-		/*&__text{}*/
-		&__button{
-			border: none;
-			background-color: transparent;
-			transform: rotate(-90deg);
-		}
-		&__content-item--active &__button{
-			transform: rotate(0deg);
-		}
-		&__sub-menu-container {
-			position: unset;
-			display: flex;
-			width: 100%;
-			height: 1px;
-			overflow: hidden;
-		}
-		&__content-item--active &__sub-menu-container {
-			height: auto;
-		}
-	}
+  .main-menu {
+    gap: 1rem;
+
+    &__list {
+      text-decoration: none;
+      list-style-type: none;
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      padding: 15px;
+      padding-right: 30px;
+    }
+
+    &__content-item--active &__item {
+      background-color: colors-theme-dark.$bagraund-color-top-level-entry-hover;
+
+      body.light & {
+        background-color: colors-theme-light.$bagraund-color-top-level-entry-hover;
+      }
+    }
+
+    /*&__text{}*/
+    &__button {
+      border: none;
+      background-color: transparent;
+      transform: rotate(-90deg);
+    }
+
+    &__content-item--active &__button {
+      transform: rotate(0deg);
+    }
+
+    &__sub-menu-container {
+      position: unset;
+      display: flex;
+      width: 100%;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    &__content-item--active &__sub-menu-container {
+      height: auto;
+    }
+  }
 }
+
 /*structure HTML
 <nav class="main-menu">
 	<a class="main-menu__logo" href="#"><img src="" alt=""></a>
@@ -234,139 +269,157 @@ nav.main-menu>a.main-menu__logo+ul.main-menu__list>li.main-menu__content-item>a.
 
 /*sub-menu///////////////////////////////////////////////////////////*/
 @media screen and (min-width: 851px) {
-	.sub-menu {
-		display: block;
-		width: 100%;
-		border-radius: 5px;
-		padding: 0.5rem;
-		list-style-type: none;
-		background-color: colors-theme-dark.$baground-color-z-index-2;
-		border: 1px solid colors-theme-dark.$border-box-color;
-		box-shadow: 0px 0px 1px colors-theme-dark.$border-box-color;
-		body.light & {
-			background-color: colors-theme-light.$baground-color-z-index-2;
-			border: 1px solid colors-theme-light.$border-box-color;
-			box-shadow: 0px 0px 1px colors-theme-light.$border-box-color;
-		}
-	
-		&__link {
-			display: flex;
-			align-items: center;
-			padding: 12px;
-			text-decoration: none;
-			border-radius: 5px;
-			width: 100%;
-			height: 100%;
-			&:hover{
-				background-color: colors-theme-dark.$baground-color-z-index-1;
-				body.light &{
-					background-color: colors-theme-light.$baground-color-z-index-1;
-				}
-			}
-		}
-	
-		&__icon {
-			height: 2rem;
-			margin-right: 0.75rem;
-			width: 0.2rem;
-			margin: 0px 12px 0px 0px;
-	
-			&--red{
-				background-color: #ff012d;
-			}
-			&--green{
-				background-color: #00c400;
-			}
-			&--orange{
-				background-color: #ff5500;
-			}
-			&--blue{
-				background-color: #0094c6;
-			}
-		}
-	
-		&__contain {
-			background-color: transparent;
-			& *{
-				background-color: transparent;
-			}
-		}
-	
-		&__heading {
-			margin: 0px 0px 5px 0px;
-		}
-	
-		&__description {
-			font-size: small;
-		}
-	}
+  .sub-menu {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.5rem;
+    list-style-type: none;
+    background-color: colors-theme-dark.$baground-color-z-index-2;
+    border: 1px solid colors-theme-dark.$border-box-color;
+    box-shadow: 0px 0px 1px colors-theme-dark.$border-box-color;
+
+    body.light & {
+      background-color: colors-theme-light.$baground-color-z-index-2;
+      border: 1px solid colors-theme-light.$border-box-color;
+      box-shadow: 0px 0px 1px colors-theme-light.$border-box-color;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        background-color: colors-theme-dark.$baground-color-z-index-1;
+
+        body.light & {
+          background-color: colors-theme-light.$baground-color-z-index-1;
+        }
+      }
+    }
+
+    &__icon {
+      height: 2rem;
+      margin-right: 0.75rem;
+      width: 0.2rem;
+      margin: 0px 12px 0px 0px;
+
+      &--red {
+        background-color: #ff012d;
+      }
+
+      &--green {
+        background-color: #00c400;
+      }
+
+      &--orange {
+        background-color: #ff5500;
+      }
+
+      &--blue {
+        background-color: #0094c6;
+      }
+    }
+
+    &__contain {
+      background-color: transparent;
+
+      & * {
+        background-color: transparent;
+      }
+    }
+
+    &__heading {
+      margin: 0px 0px 5px 0px;
+    }
+
+    &__description {
+      font-size: small;
+    }
+  }
 }
+
 @media screen and (max-width: 850px) {
-	.sub-menu {
-		width: 100%;
-		list-style-type: none;
-		background-color: colors-theme-dark.$baground-color-z-index-2;
-		border-bottom: 1px solid colors-theme-dark.$border-box-color;
-		border-top: 1px solid colors-theme-light.$border-box-color;;
-		box-shadow: 0px 0px 1px colors-theme-dark.$border-box-color;
-		body.light & {
-			background-color: colors-theme-light.$baground-color-z-index-2;
-			border-bottom: 1px solid colors-theme-light.$border-box-color;
-			border-top: 1px solid colors-theme-light.$border-box-color;;
-			box-shadow: 0px 0px 1px colors-theme-light.$border-box-color;
-		}
-	
-		&__link {
-			display: flex;
-			align-items: center;
-			padding: 12px;
-			text-decoration: none;
-			width: 100%;
-			height: 100%;
-			&:hover{
-				background-color: colors-theme-dark.$baground-color-z-index-1;
-				body.light &{
-					background-color: colors-theme-light.$baground-color-z-index-1;
-				}
-			}
-		}
-	
-		&__icon {
-			height: 2rem;
-			margin-right: 0.75rem;
-			width: 0.2rem;
-			margin: 0px 12px 0px 0px;
-	
-			&--red{
-				background-color: #ff012d;
-			}
-			&--green{
-				background-color: #00c400;
-			}
-			&--orange{
-				background-color: #ff5500;
-			}
-			&--blue{
-				background-color: #0094c6;
-			}
-		}
-	
-		&__contain {
-			background-color: transparent;
-			& *{
-				background-color: transparent;
-			}
-		}
-	
-		&__heading {
-			margin: 0px 0px 5px 0px;
-		}
-	
-		&__description {
-			font-size: small;
-		}
-	}
+  .sub-menu {
+    width: 100%;
+    list-style-type: none;
+    background-color: colors-theme-dark.$baground-color-z-index-2;
+    border-bottom: 1px solid colors-theme-dark.$border-box-color;
+    border-top: 1px solid colors-theme-light.$border-box-color;
+    ;
+    box-shadow: 0px 0px 1px colors-theme-dark.$border-box-color;
+
+    body.light & {
+      background-color: colors-theme-light.$baground-color-z-index-2;
+      border-bottom: 1px solid colors-theme-light.$border-box-color;
+      border-top: 1px solid colors-theme-light.$border-box-color;
+      ;
+      box-shadow: 0px 0px 1px colors-theme-light.$border-box-color;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        background-color: colors-theme-dark.$baground-color-z-index-1;
+
+        body.light & {
+          background-color: colors-theme-light.$baground-color-z-index-1;
+        }
+      }
+    }
+
+    &__icon {
+      height: 2rem;
+      margin-right: 0.75rem;
+      width: 0.2rem;
+      margin: 0px 12px 0px 0px;
+
+      &--red {
+        background-color: #ff012d;
+      }
+
+      &--green {
+        background-color: #00c400;
+      }
+
+      &--orange {
+        background-color: #ff5500;
+      }
+
+      &--blue {
+        background-color: #0094c6;
+      }
+    }
+
+    &__contain {
+      background-color: transparent;
+
+      & * {
+        background-color: transparent;
+      }
+    }
+
+    &__heading {
+      margin: 0px 0px 5px 0px;
+    }
+
+    &__description {
+      font-size: small;
+    }
+  }
 }
+
 /*Structure HTML
 <ul class="sub-menu">
 	<li class="sub-menu__content-item">
@@ -386,46 +439,52 @@ ul.sub-menu>li.sub-menu__content-item*<!--NOMBERITEMS-->>a.sub-menu__link>div.su
 
 /*///////////////////////////////////////////////////////////////////*/
 .switcher-theme {
-	margin-left: 10px;
-	display: inline-block;
-	border-radius: 1rem;
-	padding: 0.3rem 0.5rem;
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	&:hover {
-		background-color: colors-theme-dark.$baground-color-z-index-1;
-		body.light & {
-			background-color: colors-theme-light.$baground-color-z-index-1;
-		}
-	}
-	* {
-		background-color: transparent;
-		border: none;
-	}
+  margin-left: 10px;
+  display: inline-block;
+  border-radius: 1rem;
+  padding: 0.3rem 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
-	&__button-wrap {
-		display: flex;
-		align-items: center;
-		gap: 0.25rem;
-	}
+  &:hover {
+    background-color: colors-theme-dark.$baground-color-z-index-1;
 
-	.fa-solid {
-		width: 1rem;
-	}
-	.fa-sun {
-		display: none;
-	}
-	body.light &{
-		.fa-sun {
-			display: block;
-		}
-		.fa-moon {
-			display: none;
-		}
-	}
+    body.light & {
+      background-color: colors-theme-light.$baground-color-z-index-1;
+    }
+  }
 
-	/*Structure HTML
+  * {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__button-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .fa-solid {
+    width: 1rem;
+  }
+
+  .fa-sun {
+    display: none;
+  }
+
+  body.light & {
+    .fa-sun {
+      display: block;
+    }
+
+    .fa-moon {
+      display: none;
+    }
+  }
+
+  /*Structure HTML
 	<button class="switcher-theme" id="switcher-theme">
 		<span class="switcher-theme__button-wrap">
 			<i class="fa-solid fa-moon"></i>
@@ -446,47 +505,50 @@ ul.sub-menu>li.sub-menu__content-item*<!--NOMBERITEMS-->>a.sub-menu__link>div.su
 }
 
 /*///////////////////////////////////////////////////////////////////*/
-.finder{
-	position: relative;
-	border-radius: 1rem;
-	margin-right: 10px;
-	background-color: colors-theme-dark.$baground-color-z-index-1;
-	body.light & {
-		background-color: colors-theme-light.$baground-color-z-index-1;
-	}
+.finder {
+  position: relative;
+  border-radius: 1rem;
+  margin-right: 10px;
+  background-color: colors-theme-dark.$baground-color-z-index-1;
 
-	*{
-		background-color: transparent;
-	}
+  body.light & {
+    background-color: colors-theme-light.$baground-color-z-index-1;
+  }
 
-	&__input {
-		padding: 0.5rem;
-		border: none;
-		border-radius: 1rem;
-		width: 6rem;
-		transition: 0.3s;
-		color: colors-theme-dark.$input-buscar-color;
-		body.light & {
-			color: colors-theme-light.$input-buscar-color;
-		}
-		&:focus-visible{
-			width: 12rem;
-		}
-	}
+  * {
+    background-color: transparent;
+  }
 
-	&__send {
-		position: absolute;
-		border: none;
-		bottom: 0.5rem;
-    	right: 0.5rem;
-		cursor: pointer;
+  &__input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 1rem;
+    width: 6rem;
+    transition: 0.3s;
+    color: colors-theme-dark.$input-buscar-color;
 
-		&:hover {
-			color: #0094c6 ;
-		}
-	}
+    body.light & {
+      color: colors-theme-light.$input-buscar-color;
+    }
 
-	/*Structure HTML
+    &:focus-visible {
+      width: 12rem;
+    }
+  }
+
+  &__send {
+    position: absolute;
+    border: none;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      color: #0094c6;
+    }
+  }
+
+  /*Structure HTML
 	<form class="finder" action="">
 		<input class="finder__input" type="text" placeholder="Buscar...">
 		<button class="finder__send"><i class="fa-solid fa-magnifying-glass"></i></button>
