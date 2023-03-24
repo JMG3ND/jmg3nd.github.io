@@ -712,6 +712,9 @@ body.light .main-finder__input {
   }
 }
 /*home-page-information//////////////////////////////////////////////*/
+.home-page-information {
+  min-height: 600px;
+}
 .home-page-information__title {
   margin: 0 auto;
   padding: 1rem;
