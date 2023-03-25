@@ -1,0 +1,68 @@
+header.top-navegation-bar.justify-elements-in-screen
+  .top-navegation-bar__nav.justify-elements-in-screen__container
+    a.top-navegation-bar__logo(href='index.html')
+      img(src='images/logo-solvedrubik-150.png' alt='logo-solvedrubik')
+    #top-navegation-bar__menus-container.top-navegation-bar__menus-container
+      .top-navegation-bar__menu-separator.top-navegation-bar__menu-separator--uno
+        //- block
+        nav.main-menu
+          ul.main-menu__list
+            //-El modificador hamburguer indica que es un item con sub-menú
+            li.main-menu__content-item.main-menu__content-item--hamburguer
+              a.main-menu__item(href='#')
+                span.main-menu__text CUBOS
+                button.main-menu__button
+                  i.fa-solid.fa-caret-down
+              .main-menu__sub-menu-container
+                //- block
+                ul.sub-menu
+                  li.sub-menu__content-item.dospordos-link-container
+                    a.sub-menu__link(href='#')
+                      .sub-menu__icon.sub-menu__icon--red
+                      .sub-menu__contain
+                        .sub-menu__heading CUBO 2 X 2
+                        p.sub-menu__description Algoritmos del cubo dos por dos
+                  li.sub-menu__content-item.tresportres-link-container
+                    a.sub-menu__link(href='#')
+                      .sub-menu__icon.sub-menu__icon--green
+                      .sub-menu__contain
+                        .sub-menu__heading CUBO 3 X 3
+                        p.sub-menu__description
+                          | Algoritmos del cubo tres por tres
+                  li.sub-menu__content-item.cuatroporcuatro-link-container
+                    a.sub-menu__link(href='#')
+                      .sub-menu__icon.sub-menu__icon--orange
+                      .sub-menu__contain
+                        .sub-menu__heading CUBO 4 X 4
+                        p.sub-menu__description
+                          | Algoritmos del cubo cuatro por
+                          | cuatro
+                  li.sub-menu__content-item.cincoporcinco-link-container
+                    a.sub-menu__link(href='#')
+                      .sub-menu__icon.sub-menu__icon--blue
+                      .sub-menu__contain
+                        .sub-menu__heading CUBO 5 X 5
+                        p.sub-menu__description
+                          | Algoritmos del cubo cinco por cinco
+            li.main-menu__content-item
+              a.main-menu__item(href='#') TIENDA
+      .top-navegation-bar__menu-separator.top-navegation-bar__menu-separator--dos
+        //- block
+        button#switcher-theme.switcher-theme
+          span.switcher-theme__button-wrap
+            i.fa-solid.fa-moon
+            i.fa-solid.fa-sun
+            |                 Tema
+        //- block
+        form.finder(action='')
+          input.finder__input(type='text' placeholder='Buscar...')
+          button.finder__send
+            i.fa-solid.fa-magnifying-glass
+    .top-navegation-bar__button-container
+      button#top-navegation-bar__button.top-navegation-bar__button
+        i.fa-solid.fa-bars
+
+script(src='scipts/main-menu__button.js')
+script(src='scipts/define-theme.js')
+script(src='scipts/activetheme.js')
+script(src='scipts/top-navegation-bar__button.js')
