@@ -4,7 +4,7 @@ html(lang="es")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="css/index.css")
+    link(rel="stylesheet", href="../css/index.css")
 
     //- Con esto obligamos a los dispositivos móviles a decirnos cuál es el ancho de la pantalla real al momento de realizar la carga de la página
     meta(name="viewport", content="width=device-width")
@@ -18,7 +18,7 @@ html(lang="es")
   body
 
     //-Inclusión del top navegation bar en la página
-    include global-block-elements/top-navegation-bar.pug
+    include ../global-block-elements/top-navegation-bar.pug
 
     main
       article
@@ -26,8 +26,8 @@ html(lang="es")
         section.home-page-finder.justify-elements-in-screen
           .home-page-finder__container.justify-elements-in-screen__container
             form.home-page-finder__form(action='')
-              img.home-page-finder__title.home-page-finder__title--dark(src='images/logo-solvedrubik-hom-page-presentation-dark-640.png' alt='')
-              img.home-page-finder__title.home-page-finder__title--light(src='images/logo-solvedrubik-hom-page-presentation-light-640.png' alt='')
+              img.home-page-finder__title.home-page-finder__title--dark(src='../images/logo-solvedrubik-hom-page-presentation-dark-640.png' alt='')
+              img.home-page-finder__title.home-page-finder__title--light(src='../images/logo-solvedrubik-hom-page-presentation-light-640.png' alt='')
               //- block
               .main-finder(action='')
                 input.main-finder__input(type='text' placeholder='Buscar...')
@@ -42,7 +42,7 @@ html(lang="es")
               //- block
               section.article-item
                 .article-item__image-container
-                  img.article-item__image(src='images/home-page-article/cubo-dos-por-dos.png' alt='Cubo de rubik 2x2')
+                  img.article-item__image(src='../images/home-page-article/cubo-dos-por-dos.png' alt='Cubo de rubik 2x2')
                 .article-item__informataion-container
                   header.article-item__title-container
                     h2.article-item__title CUBO 2X2
@@ -55,7 +55,7 @@ html(lang="es")
               //- block
               section.article-item
                 .article-item__image-container
-                  img.article-item__image(src='images/home-page-article/cubo-tres-por-tres.png' alt='Cubo de rubik 2x2')
+                  img.article-item__image(src='../images/home-page-article/cubo-tres-por-tres.png' alt='Cubo de rubik 2x2')
                 .article-item__informataion-container
                   header.article-item__title-container
                     h2.article-item__title CUBO 3X3
@@ -68,7 +68,7 @@ html(lang="es")
               //- block
               section.article-item
                 .article-item__image-container
-                  img.article-item__image(src='images/home-page-article/cubo-cuatro-por-cuatro.png' alt='Cubo de rubik 2x2')
+                  img.article-item__image(src='../images/home-page-article/cubo-cuatro-por-cuatro.png' alt='Cubo de rubik 2x2')
                 .article-item__informataion-container
                   header.article-item__title-container
                     h2.article-item__title CUBO 4X4
@@ -81,7 +81,7 @@ html(lang="es")
               //- block
               section.article-item
                 .article-item__image-container
-                  img.article-item__image(src='images/home-page-article/cubo-cinco-por-cinco.png' alt='Cubo de rubik 2x2')
+                  img.article-item__image(src='../images/home-page-article/cubo-cinco-por-cinco.png' alt='Cubo de rubik 2x2')
                 .article-item__informataion-container
                   header.article-item__title-container
                     h2.article-item__title CUBO 5X5
@@ -93,4 +93,4 @@ html(lang="es")
                     a.button-link(href='#') Ir
 
     //- Inclusión del footer en la página
-    include global-block-elements/footer.pug
+    include ../global-block-elements/footer.pug
