@@ -206,15 +206,22 @@
 
     &__item {
       position: relative;
-      display: flex;
+      display: inline-block;
       align-items: center;
       justify-content: space-between;
       text-decoration: none;
       padding: 15px;
+    }
+
+    &__content-item-head {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding-right: 30px;
     }
 
-    &__content-item--active &__item {
+    &__content-item--active &__content-item-head {
       background-color: colors-theme-dark.$bagraund-color-top-level-entry-hover;
 
       body.light & {
@@ -224,8 +231,15 @@
 
     /*&__text{}*/
     &__button {
+      background-color: colors-theme-dark.$baground-color-z-index-1;
+      body.light &{
+        background-color: colors-theme-light.$baground-color-z-index-1;
+      }
+
+      border-radius: 24px;
+      width: 30px;
+      height: 30px;
       border: none;
-      background-color: transparent;
       transform: rotate(-90deg);
     }
 

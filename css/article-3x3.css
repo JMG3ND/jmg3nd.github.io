@@ -1,0 +1,632 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #1b1b1b;
+}
+body * {
+  color: #CDCDCD;
+}
+
+body.light {
+  background-color: #ffffff;
+}
+body.light * {
+  color: #000000;
+}
+
+.justify-elements-in-screen {
+  width: 100%;
+}
+.justify-elements-in-screen__container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/*
+	Emmet abbreviation
+	div.justify-elements-in-screen>div.justify-elements-in-screen__container
+
+	HTML code
+	<div class="justify-elements-in-screen">
+        <div class="justify-elements-in-screen__container">
+
+        </div>
+    </div>
+*/
+/*top-navegation-bar/////////////////////////////////////////////////*/
+@media screen and (min-width: 851px) {
+  .top-navegation-bar {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: #1b1b1b;
+    border-bottom: 1px solid #858585;
+  }
+  body.light .top-navegation-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cdcdcd;
+  }
+  .top-navegation-bar__nav {
+    display: flex;
+    padding: 10px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .top-navegation-bar__menus-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .top-navegation-bar__menu-separator {
+    display: flex;
+    gap: 1rem;
+  }
+  .top-navegation-bar__button-container {
+    display: none;
+  }
+  .top-navegation-bar__button {
+    border: none;
+    background-color: transparent;
+    font-size: xx-large;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 850px) {
+  .top-navegation-bar {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: #1b1b1b;
+    border-bottom: 1px solid #858585;
+    /*&__menu-separator {display: block}*/
+  }
+  body.light .top-navegation-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cdcdcd;
+  }
+  .top-navegation-bar__nav {
+    display: flex;
+    padding: 10px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-navegation-bar__menus-container {
+    background-color: #1b1b1b;
+    border: 2px solid #363636;
+    width: 80%;
+    max-width: 400px;
+    position: fixed;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    top: 60px;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+  }
+  body.light .top-navegation-bar__menus-container {
+    background-color: #ffffff;
+    border: 2px solid #f9f9fb;
+  }
+  .top-navegation-bar__menus-container--show {
+    transform: unset;
+  }
+  .top-navegation-bar__logo > img {
+    width: 120px;
+  }
+  .top-navegation-bar__button-container {
+    display: block;
+  }
+  .top-navegation-bar__button {
+    border: none;
+    background-color: transparent;
+    font-size: x-large;
+  }
+  .top-navegation-bar__menu-separator {
+    margin-top: 0.5rem;
+  }
+  .top-navegation-bar__menu-separator--uno {
+    order: 2;
+  }
+  .top-navegation-bar__menu-separator--dos {
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/*structure HTML
+	<header class="top-navegation-bar justify-elements-in-screen">
+		<div class="top-navegation-bar__nav justify-elements-in-screen__container">
+			<a class="top-navegation-bar__logo" href="#"><img src="" alt=""></a>
+			<div class="top-navegation-bar__menus-container">
+				<div class="top-navegation-bar__menu-separator">
+				</div>
+				<div class="top-navegation-bar__menu-separator">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	Emmed abbreviation
+	header.top-navegation-bar>a.top-navegation-bar__logo+div.top-navegation-bar__nav>div.top-navegation-bar__menu-separator*2
+
+	JS
+	function showMenu() {
+    document.querySelector("#top-navegation-bar__menus-container").classList.toggle('top-navegation-bar__menus-container--show');
+	}
+*/
+/*main-menu//////////////////////////////////////////////////////////*/
+@media screen and (min-width: 851px) {
+  .main-menu {
+    display: flex;
+    gap: 1rem;
+    /*&__text{}*/
+  }
+  .main-menu__list {
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .main-menu__item {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 5PX;
+  }
+  .main-menu__item:hover {
+    background-color: #363636;
+  }
+  body.light .main-menu__item:hover {
+    background-color: #f9f9fb;
+  }
+  .main-menu__button {
+    display: none;
+  }
+  .main-menu__sub-menu-container {
+    display: none;
+    position: absolute;
+  }
+  .main-menu__content-item:hover .main-menu__sub-menu-container {
+    display: flex;
+  }
+}
+@media screen and (max-width: 850px) {
+  .main-menu {
+    gap: 1rem;
+    /*&__text{}*/
+  }
+  .main-menu__list {
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .main-menu__item {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 15px;
+  }
+  .main-menu__content-item-head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+  }
+  .main-menu__content-item--active .main-menu__content-item-head {
+    background-color: #363636;
+  }
+  body.light .main-menu__content-item--active .main-menu__content-item-head {
+    background-color: #f9f9fb;
+  }
+  .main-menu__button {
+    background-color: #363636;
+    border-radius: 24px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    transform: rotate(-90deg);
+  }
+  body.light .main-menu__button {
+    background-color: #f9f9fb;
+  }
+  .main-menu__content-item--active .main-menu__button {
+    transform: rotate(0deg);
+  }
+  .main-menu__sub-menu-container {
+    position: unset;
+    display: flex;
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+  }
+  .main-menu__content-item--active .main-menu__sub-menu-container {
+    height: auto;
+  }
+}
+/*structure HTML
+<nav class="main-menu">
+	<a class="main-menu__logo" href="#"><img src="" alt=""></a>
+	<ul class="main-menu__list">
+		<li class="main-menu__content-item">
+			<a class="main-menu__item" href="#">
+				<span class="main-menu__text">Texto</span>
+				<span class="main-menu__icon"><!--Icono--></span>
+			</a>
+			<div class="main-menu__sub-menu-container">
+			</div>
+		</li>
+	</ul>
+</nav>
+
+Emmet abbreviation
+Agregar span e icono
+nav.main-menu>a.main-menu__logo+ul.main-menu__list>li.main-menu__content-item>a.main-menu__item+div.main-menu__sub-menu-container
+*/
+/*sub-menu///////////////////////////////////////////////////////////*/
+@media screen and (min-width: 851px) {
+  .sub-menu {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.5rem;
+    list-style-type: none;
+    background-color: #1b1b1b;
+    border: 1px solid #858585;
+    box-shadow: 0px 0px 1px #858585;
+  }
+  body.light .sub-menu {
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    box-shadow: 0px 0px 1px #cdcdcd;
+  }
+  .sub-menu__link {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  .sub-menu__link:hover {
+    background-color: #363636;
+  }
+  body.light .sub-menu__link:hover {
+    background-color: #f9f9fb;
+  }
+  .sub-menu__icon {
+    height: 2rem;
+    margin-right: 0.75rem;
+    width: 0.2rem;
+    margin: 0px 12px 0px 0px;
+  }
+  .sub-menu__icon--red {
+    background-color: #ff012d;
+  }
+  .sub-menu__icon--green {
+    background-color: #00c400;
+  }
+  .sub-menu__icon--orange {
+    background-color: #ff5500;
+  }
+  .sub-menu__icon--blue {
+    background-color: #0094c6;
+  }
+  .sub-menu__contain {
+    background-color: transparent;
+  }
+  .sub-menu__contain * {
+    background-color: transparent;
+  }
+  .sub-menu__heading {
+    margin: 0px 0px 5px 0px;
+  }
+  .sub-menu__description {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 850px) {
+  .sub-menu {
+    width: 100%;
+    list-style-type: none;
+    background-color: #1b1b1b;
+    border-bottom: 1px solid #858585;
+    border-top: 1px solid #cdcdcd;
+    box-shadow: 0px 0px 1px #858585;
+  }
+  body.light .sub-menu {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cdcdcd;
+    border-top: 1px solid #cdcdcd;
+    box-shadow: 0px 0px 1px #cdcdcd;
+  }
+  .sub-menu__link {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+  .sub-menu__link:hover {
+    background-color: #363636;
+  }
+  body.light .sub-menu__link:hover {
+    background-color: #f9f9fb;
+  }
+  .sub-menu__icon {
+    height: 2rem;
+    margin-right: 0.75rem;
+    width: 0.2rem;
+    margin: 0px 12px 0px 0px;
+  }
+  .sub-menu__icon--red {
+    background-color: #ff012d;
+  }
+  .sub-menu__icon--green {
+    background-color: #00c400;
+  }
+  .sub-menu__icon--orange {
+    background-color: #ff5500;
+  }
+  .sub-menu__icon--blue {
+    background-color: #0094c6;
+  }
+  .sub-menu__contain {
+    background-color: transparent;
+  }
+  .sub-menu__contain * {
+    background-color: transparent;
+  }
+  .sub-menu__heading {
+    margin: 0px 0px 5px 0px;
+  }
+  .sub-menu__description {
+    font-size: small;
+  }
+}
+/*Structure HTML
+<ul class="sub-menu">
+	<li class="sub-menu__content-item">
+		<a class="sub-menu__link" href="#">
+			<div class="sub-menu__icon sub-menu__icon--red"></div>
+			<div class="sub-menu__contain">
+				<div class="sub-menu__heading"></div>
+				<p class="sub-menu__description"></p>
+			</div>
+		</a>
+	</li>
+</ul>
+
+Emmet abbreviation
+ul.sub-menu>li.sub-menu__content-item*<!--NOMBERITEMS-->>a.sub-menu__link>div.sub-menu__icon.sub-menu__icon--red+div.sub-menu__contain>div.sub-menu__heading+p.sub-menu__description
+*/
+/*///////////////////////////////////////////////////////////////////*/
+.switcher-theme {
+  margin-left: 10px;
+  display: inline-block;
+  border-radius: 1rem;
+  padding: 0.3rem 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  /*Structure HTML
+  <button class="switcher-theme" id="switcher-theme">
+  	<span class="switcher-theme__button-wrap">
+  		<i class="fa-solid fa-moon"></i>
+  		<i class="fa-solid fa-sun"></i>
+  		Tema
+  	</span>
+  </button>
+
+  Emmet abbreviation
+  button.switcher-theme>span.switcher-theme__button-wrap>i.fa-solid.fa-moon+i.fa-solid.fa-sun
+
+  .js funcion
+  const btnSwitch = document.querySelector('#switcher-theme');
+  btnSwitch.addEventListener('click', () => {
+  	document.body.classList.toggle('light');
+  });
+  */
+}
+.switcher-theme:hover {
+  background-color: #363636;
+}
+body.light .switcher-theme:hover {
+  background-color: #f9f9fb;
+}
+.switcher-theme * {
+  background-color: transparent;
+  border: none;
+}
+.switcher-theme__button-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.switcher-theme .fa-solid {
+  width: 1rem;
+}
+.switcher-theme .fa-sun {
+  display: none;
+}
+body.light .switcher-theme .fa-sun {
+  display: block;
+}
+body.light .switcher-theme .fa-moon {
+  display: none;
+}
+
+/*///////////////////////////////////////////////////////////////////*/
+.finder {
+  position: relative;
+  border-radius: 1rem;
+  margin-right: 10px;
+  background-color: #363636;
+  /*Structure HTML
+  <form class="finder" action="">
+  	<input class="finder__input" type="text" placeholder="Buscar...">
+  	<button class="finder__send"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </form>
+
+  Emmet abbreviation
+  form.finder>input.finder__input+button.finder__send>i.fa-solid.fa-magnifying-glass
+  */
+}
+body.light .finder {
+  background-color: #f9f9fb;
+}
+.finder * {
+  background-color: transparent;
+}
+.finder__input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  width: 6rem;
+  transition: 0.3s;
+  color: white;
+}
+body.light .finder__input {
+  color: black;
+}
+.finder__input:focus-visible {
+  width: 12rem;
+}
+.finder__send {
+  position: absolute;
+  border: none;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+}
+.finder__send:hover {
+  color: #0094c6;
+}
+
+/*///////////////////////////////////////////////////////////////////*/
+.footer {
+  background-color: #363636;
+}
+body.light .footer {
+  background-color: #f9f9fb;
+}
+.footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+@media screen and (max-width: 850px) {
+  .footer__nav {
+    justify-content: center;
+  }
+}
+/*///////////////////////////////////////////////////////////////////*/
+@media screen and (min-width: 851px) {
+  .social-networks-list {
+    list-style-type: none;
+    display: flex;
+    margin: 1rem;
+    /*Structure HTML
+    <ul class="social-networks-list">
+        <li class="social-networks-list__item-container">
+            <a class="social-networks-list__item" href="#">
+                <i class="fa-brands fa-facebook"></i>
+                <span class="social-networks-list__text social-networks-list__text--facebook">Facebook</span>
+            </a>
+        </li>
+    </ul>
+
+    Emmed abbreviation
+    ul.social-networks-list>li.social-networks-list__item-container*<!--Numero de items-->>a.social-networks-list__item>i.fa-brands.fa-facebook+span.social-networks-list__text.social-networks-list__text--facebook
+    */
+  }
+  .social-networks-list * {
+    background-color: transparent;
+  }
+  .social-networks-list__item {
+    text-decoration: none;
+    display: flex;
+    font-size: x-large;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .social-networks-list__item:hover .fa-facebook,
+  .social-networks-list__item:hover .social-networks-list__text--facebook {
+    color: #077ae9;
+  }
+  .social-networks-list__item:hover .fa-twitter,
+  .social-networks-list__item:hover .social-networks-list__text--twitter {
+    color: #1c99e6;
+  }
+  .social-networks-list__item:hover .fa-instagram,
+  .social-networks-list__item:hover .social-networks-list__text--instagram {
+    color: #c30073;
+  }
+  .social-networks-list__item:hover .fa-youtube,
+  .social-networks-list__item:hover .social-networks-list__text--youtube {
+    color: #f10002;
+  }
+  .social-networks-list__item:hover .fa-whatsapp,
+  .social-networks-list__item:hover .social-networks-list__text--whatsapp {
+    color: #1acc3e;
+  }
+  .social-networks-list .fa-brands {
+    width: 2rem;
+    padding: 5px;
+  }
+  .social-networks-list__text {
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .social-networks-list__item:hover .social-networks-list__text {
+    width: 6rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .social-networks-list {
+    list-style-type: none;
+    margin: 1rem;
+    display: flex;
+  }
+  .social-networks-list * {
+    background-color: transparent;
+  }
+  .social-networks-list__item {
+    text-decoration: none;
+    display: flex;
+    font-size: x-large;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .social-networks-list .fa-brands {
+    width: 2rem;
+    padding: 5px;
+  }
+  .social-networks-list__text {
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+}
+
+/*# sourceMappingURL=article-3x3.css.map */

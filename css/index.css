@@ -214,23 +214,35 @@ body.light * {
   }
   .main-menu__item {
     position: relative;
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
     padding: 15px;
+  }
+  .main-menu__content-item-head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-right: 30px;
   }
-  .main-menu__content-item--active .main-menu__item {
+  .main-menu__content-item--active .main-menu__content-item-head {
     background-color: #363636;
   }
-  body.light .main-menu__content-item--active .main-menu__item {
+  body.light .main-menu__content-item--active .main-menu__content-item-head {
     background-color: #f9f9fb;
   }
   .main-menu__button {
+    background-color: #363636;
+    border-radius: 24px;
+    width: 30px;
+    height: 30px;
     border: none;
-    background-color: transparent;
     transform: rotate(-90deg);
+  }
+  body.light .main-menu__button {
+    background-color: #f9f9fb;
   }
   .main-menu__content-item--active .main-menu__button {
     transform: rotate(0deg);
